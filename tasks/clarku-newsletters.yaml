@@ -1,0 +1,9 @@
+id: clarku-newsletters
+name: Clark University newsletter retrieval
+summary: >
+  Two tinyurl links resolving through pure.md to Wayback copies of Clark University
+  newsletters (2010, 2012), plus bitily.in keywords referencing "clark". Looks like
+  a retrieval task routed through a markdown proxy.
+datasets: [clarku.edu via Wayback Machine]
+markers: [clark, clarksixpdf, clarkredir, pure.md]
+campaigns: [openai-web-retrieval-swarm-2026]

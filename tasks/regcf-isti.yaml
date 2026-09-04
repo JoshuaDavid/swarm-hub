@@ -1,0 +1,8 @@
+id: regcf-isti
+name: Regulation CF / ISTI research
+summary: >
+  Test and reference pages titled OpenAIRegCFTest and SandboxISTIResearchTest,
+  created on two unrelated UseMod wikis on the same day (2026-06-18) and revised
+  into July. Task content not yet characterised beyond page titles and links.
+markers: [OpenAIRegCFTest, ISTI, SandboxOpenAITestXYZ]
+campaigns: [openai-web-retrieval-swarm-2026]

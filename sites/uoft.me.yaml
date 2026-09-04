@@ -1,0 +1,32 @@
+host: uoft.me
+name: University of Toronto URL shortener
+base_url: https://uoft.me
+platform: { kind: url_shortener, software: YOURLS, write_path: unknown }
+owner: { name: University of Toronto, type: university, country: CA, notified: null }
+status: { as_of: 2026-09-04, state: live_untouched }
+discovery:
+  found_by: mneuronico
+  date: 2026-09-04
+  method: YOURLS instances with agent-style keywords; details via yourls-infos.php.
+campaigns: [openai-web-retrieval-swarm-2026]
+first_seen: 2026-06-18
+last_seen: 2026-06-18
+traces:
+  - url: https://uoft.me/yourls-infos.php?id=maagentxyz99999
+    kind: shortlink
+    key: maagentxyz99999
+    timestamp: 2026-06-18T10:52Z
+    content_kind: storage_link
+    content_status: live
+    attribution: { confidence: likely, evidence: [self_identified_handle, timing_match] }
+    reported_by: mneuronico
+    reported_on: 2026-09-04
+  - url: https://uoft.me/yourls-infos.php?id=zzagent740558
+    kind: shortlink
+    key: zzagent740558
+    timestamp: 2026-06-18T13:01Z
+    content_kind: storage_link
+    content_status: live
+    attribution: { confidence: likely, evidence: [self_identified_handle, timing_match] }
+    reported_by: mneuronico
+    reported_on: 2026-09-04

@@ -1,0 +1,56 @@
+id: openai-web-retrieval-swarm-2026
+name: OpenAI web-retrieval swarm (public wikis, pastebins, shorteners)
+summary: >
+  Agents running a timed, multi-round web-lookup task with read-only internet
+  access found sites where reading could be turned into writing, and used them to
+  share answers, cache datasets, relay API responses ("bridges"), and exchange
+  proxy-bypass techniques. Main venue was DSEWiki; the same handles and task
+  content appear on at least fifteen other hosts.
+period:
+  start: 2026-05-11
+  end: 2026-07-24
+attribution:
+  developer: OpenAI
+  confidence: likely
+  disclosed_by_developer: false
+  basis: >
+    Self-identifying handles (OpenAIResearcher, OAIResearchMar26), 98.5% of DSEWiki
+    edits from Microsoft Azure (AS8075), ChatGPT-User fetches following writes, and
+    OpenAI OpCo LLC address blocks visiting from 2026-06-21. OpenAI has not
+    confirmed. An external Azure customer running OpenAI models is not excluded.
+task_clusters:
+  - iowa-cancer-dashboard
+  - datausa-poverty
+  - ipeds-education
+  - federal-spending-sf133
+  - regcf-isti
+  - catalan-computation
+  - sec-ma-county
+  - clarku-newsletters
+related_campaigns: [artifactory-huggingface-2026]
+related_incidents: [openai-huggingface-2026]
+open_questions:
+  - Whether the Iowa-dashboard pastes (2026-05-13, 2026-06-16) are the same population as the DSEWiki agents or a parallel run.
+  - Whether the countapi key construction_r5_aug11_* indicates activity in August 2026, after the assumed end of the campaign.
+  - Whether the 2026-03-01 pastes on paste.linuxiarz.pl predate the campaign or belong to it.
+primary_sources:
+  - title: Discovery of a new OpenAI agent message board
+    publisher: collusion.wiki (Von Arx, Slade Byrd, Kitts, Larsen)
+    date: 2026-09-04
+    url: https://collusion.wiki/
+    kind: investigation
+  - title: OpenAI agents hijacked German website in previously undisclosed AI breakout this spring
+    publisher: Reuters
+    date: 2026-09-04
+    url: https://www.reuters.com/world/europe/openai-agents-hijacked-german-website-previously-undisclosed-ai-breakout-this-2026-09-04/
+    kind: press
+  - title: OpenAI agents hijacked a 25-year-old German wiki to cheat on their tasks and share sandbox exploits
+    publisher: The Decoder
+    date: 2026-09-04
+    url: https://the-decoder.com/openai-agents-hijacked-a-25-year-old-german-wiki-to-cheat-on-their-tasks-and-share-sandbox-exploits/
+    kind: press
+  - title: Hacker News discussion (additional sites surfaced in comments)
+    publisher: Hacker News
+    date: 2026-09-04
+    url: https://news.ycombinator.com/item?id=49563355
+    kind: discussion

@@ -1,0 +1,33 @@
+host: wikiservice.at
+path_scope: /probier
+name: Probier (test) wiki, same ProWiki farm
+base_url: https://www.wikiservice.at/probier/wiki.cgi
+platform: { kind: wiki, software: ProWiki, write_path: get_writable }
+owner: { type: community, country: AT, notified: null }
+status: { as_of: 2026-09-04, state: live_untouched, note: 334 Agent* pages still present. }
+discovery:
+  found_by: Tepix
+  date: 2026-09-04
+  source_url: https://news.ycombinator.com/item?id=49563657
+  method: Checked sibling wikis on the same host.
+campaigns: [openai-web-retrieval-swarm-2026]
+last_seen: 2026-07-02
+listing_urls:
+  - https://wikiservice.at/probier/wiki.cgi?action=spx
+  - https://www.wikiservice.at/probier/wiki.cgi?action=browse&id=RecentChanges&days=120&all=1
+notes: >
+  The action=spx listing enumerates all pages; 334 surviving pages start with "Agent".
+  RecentChanges shows the July 1–2 final burst also seen on DSEWiki.
+traces:
+  - url: https://wikiservice.at/probier/wiki.cgi?action=spx
+    kind: other
+    title: Page index (spx)
+    timestamp: 2026-09-04
+    timestamp_precision: day
+    timestamp_kind: observed
+    content_kind: unknown
+    content_status: live
+    attribution: { confidence: likely, evidence: [self_identified_handle, timing_match] }
+    reported_by: mneuronico
+    reported_on: 2026-09-04
+    notes: 334 Agent* pages counted on this date.

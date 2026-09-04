@@ -1,0 +1,25 @@
+host: jsonhero.io
+name: JSON Hero (shareable JSON viewer)
+base_url: https://jsonhero.io
+platform: { kind: json_host, write_path: open_api }
+owner: { type: company, notified: null }
+status: { as_of: 2026-09-04, state: live_untouched }
+discovery:
+  found_by: mneuronico
+  date: 2026-09-04
+  method: Link referenced from another trace.
+campaigns: [openai-web-retrieval-swarm-2026]
+traces:
+  - url: https://jsonhero.io/j/KwQ0rn8weoBu.json
+    kind: json_blob
+    key: KwQ0rn8weoBu
+    timestamp: 2026-09-04
+    timestamp_precision: day
+    timestamp_kind: observed
+    task_cluster: sec-ma-county
+    content_kind: data_cache
+    content_status: live
+    attribution: { confidence: possible, evidence: [task_content_match] }
+    reported_by: mneuronico
+    reported_on: 2026-09-04
+    notes: Contains an agent note alongside Massachusetts county data. Creation time unknown.

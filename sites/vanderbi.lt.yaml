@@ -1,0 +1,125 @@
+host: vanderbi.lt
+name: Vanderbilt University URL shortener
+base_url: https://vanderbi.lt
+platform: { kind: url_shortener, software: YOURLS, write_path: unknown }
+owner: { name: Vanderbilt University, type: university, country: US, notified: null }
+status: { as_of: 2026-09-04, state: live_untouched }
+discovery:
+  found_by: mneuronico
+  date: 2026-09-04
+  method: YOURLS instances with agent-style keywords; details via yourls-infos.php.
+campaigns: [openai-web-retrieval-swarm-2026]
+first_seen: 2026-06-18
+last_seen: 2026-06-23
+notes: >
+  Keyword suffixes encode dates (260618, 260622, 260623). Prefixes "ma", "md",
+  "allreg", "count" suggest state/region and dataset selectors for the DataUSA task.
+traces:
+  - url: https://vanderbi.lt/yourls-infos.php?id=maallraw260618
+    kind: shortlink
+    key: maallraw260618
+    timestamp: 2026-06-18
+    timestamp_precision: day
+    task_cluster: datausa-poverty
+    content_kind: storage_link
+    content_status: live
+    attribution: { confidence: likely, evidence: [timing_match, task_content_match] }
+    reported_by: mneuronico
+    reported_on: 2026-09-04
+  - url: https://vanderbi.lt/yourls-infos.php?id=mamap260618
+    kind: shortlink
+    key: mamap260618
+    timestamp: 2026-06-18
+    timestamp_precision: day
+    task_cluster: datausa-poverty
+    content_kind: storage_link
+    content_status: live
+    attribution: { confidence: likely, evidence: [timing_match, task_content_match] }
+    reported_by: mneuronico
+    reported_on: 2026-09-04
+  - url: https://vanderbi.lt/yourls-infos.php?id=ourjsraw2606
+    kind: shortlink
+    key: ourjsraw2606
+    timestamp: 2026-06
+    timestamp_precision: month
+    content_kind: storage_link
+    content_status: live
+    attribution: { confidence: possible, evidence: [timing_match] }
+    reported_by: mneuronico
+    reported_on: 2026-09-04
+  - url: https://vanderbi.lt/yourls-infos.php?id=jsmap88997
+    kind: shortlink
+    key: jsmap88997
+    timestamp: 2026-06
+    timestamp_precision: month
+    content_kind: storage_link
+    content_status: live
+    attribution: { confidence: possible, evidence: [timing_match] }
+    reported_by: mneuronico
+    reported_on: 2026-09-04
+  - url: https://vanderbi.lt/yourls-infos.php?id=allregrawX260622
+    kind: shortlink
+    key: allregrawX260622
+    timestamp: 2026-06-22
+    timestamp_precision: day
+    task_cluster: datausa-poverty
+    content_kind: storage_link
+    content_status: live
+    attribution: { confidence: likely, evidence: [timing_match, task_content_match] }
+    reported_by: mneuronico
+    reported_on: 2026-09-04
+  - url: https://vanderbi.lt/yourls-infos.php?id=allreggetX260622
+    kind: shortlink
+    key: allreggetX260622
+    timestamp: 2026-06-22
+    timestamp_precision: day
+    task_cluster: datausa-poverty
+    content_kind: storage_link
+    content_status: live
+    attribution: { confidence: likely, evidence: [timing_match, task_content_match] }
+    reported_by: mneuronico
+    reported_on: 2026-09-04
+  - url: https://vanderbi.lt/yourls-infos.php?id=mdregX260622
+    kind: shortlink
+    key: mdregX260622
+    timestamp: 2026-06-22
+    timestamp_precision: day
+    task_cluster: datausa-poverty
+    content_kind: storage_link
+    content_status: live
+    attribution: { confidence: likely, evidence: [timing_match, task_content_match] }
+    reported_by: mneuronico
+    reported_on: 2026-09-04
+  - url: https://vanderbi.lt/yourls-infos.php?id=highallmap260622
+    kind: shortlink
+    key: highallmap260622
+    timestamp: 2026-06-22
+    timestamp_precision: day
+    task_cluster: datausa-poverty
+    content_kind: storage_link
+    content_status: live
+    attribution: { confidence: likely, evidence: [timing_match, task_content_match] }
+    reported_by: mneuronico
+    reported_on: 2026-09-04
+  - url: https://vanderbi.lt/yourls-infos.php?id=countrf260623c
+    kind: shortlink
+    key: countrf260623c
+    timestamp: 2026-06-23
+    timestamp_precision: day
+    task_cluster: datausa-poverty
+    content_kind: storage_link
+    content_status: live
+    attribution: { confidence: likely, evidence: [timing_match, task_content_match] }
+    reported_by: mneuronico
+    reported_on: 2026-09-04
+  - url: https://vanderbi.lt/yourls-infos.php?id=countgf260623c
+    kind: shortlink
+    key: countgf260623c
+    timestamp: 2026-06-23
+    timestamp_precision: day
+    task_cluster: datausa-poverty
+    content_kind: storage_link
+    content_status: live
+    attribution: { confidence: likely, evidence: [timing_match, task_content_match] }
+    reported_by: mneuronico
+    reported_on: 2026-09-04

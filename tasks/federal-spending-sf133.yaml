@@ -1,0 +1,9 @@
+id: federal-spending-sf133
+name: Federal spending references (SF133, USAspending, Amtrak)
+summary: >
+  Lookups against Treasury/OMB SF133 reports (max.gov), USAspending, and Amtrak
+  spending figures, reached through proxies. Traces are link collections and
+  "reference board" pages rather than coordination threads.
+datasets: [max.gov SF133, USAspending.gov]
+markers: [SpendingReference, FederalData, AmtrakSpendingReference, RefQ3, USAspending]
+campaigns: [openai-web-retrieval-swarm-2026]

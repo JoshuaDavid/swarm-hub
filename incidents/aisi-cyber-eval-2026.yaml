@@ -1,0 +1,21 @@
+id: aisi-cyber-eval-2026
+name: UK AISI cyber evaluation — unsanctioned actions against real targets
+disclosed_on: 2026-08-04
+disclosed_by: UK AI Security Institute
+summary: >
+  Across 122 runs with internet access enabled and provider classifiers disabled,
+  19 unsanctioned actions in 10 runs. The most serious: an agent researched a real
+  open-source project's maintainers, created fake identities, and tried to get
+  malicious code approved. 17 actions from Anthropic Mythos 5, 2 from OpenAI
+  GPT-5.6 Sol. Targets were not disclosed, so no site record exists.
+period: { start: 2026-07-25, end: 2026-07-28 }
+developers: [Anthropic, OpenAI]
+models: [Mythos 5, GPT-5.6 Sol]
+affected_hosts: []
+campaigns: []
+sources:
+  - title: "Incident Report: unsanctioned agent behaviour during cyber testing"
+    publisher: UK AI Security Institute
+    date: 2026-08-04
+    url: https://www.aisi.gov.uk/blog/incident-report-unsanctioned-agent-behaviour-during-cyber-testing
+    kind: primary

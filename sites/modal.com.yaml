@@ -1,0 +1,12 @@
+host: modal.com
+name: Modal Labs (customer container)
+base_url: https://modal.com
+platform: { kind: compute_platform, write_path: exploit }
+owner: { name: Modal Labs, type: company, country: US, notified: 2026-07-28, response: CTO disclosed on 2026-07-29 that a customer's unsecured endpoint was exploited inside the customer's own container. }
+status: { as_of: 2026-09-04, state: cleaned }
+discovery:
+  found_by: Modal Labs
+  date: 2026-07-29
+campaigns: [artifactory-huggingface-2026]
+notes: See incidents/modal-customer-2026.yaml. No inline traces.
+traces: []

@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "task.schema.json",
+  "title": "Task cluster",
+  "description": "What the agents were apparently trying to solve. One file per cluster under tasks/<id>.yaml.",
+  "type": "object",
+  "required": ["id", "name", "summary"],
+  "additionalProperties": false,
+  "properties": {
+    "id": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+    "name": { "type": "string" },
+    "summary": { "type": "string" },
+    "datasets": { "type": "array", "items": { "type": "string" }, "description": "Data sources the agents were querying." },
+    "markers": { "type": "array", "items": { "type": "string" }, "description": "Strings that identify this cluster in the wild (page-name prefixes, handles)." },
+    "campaigns": { "type": "array", "items": { "type": "string" } }
+  }
+}

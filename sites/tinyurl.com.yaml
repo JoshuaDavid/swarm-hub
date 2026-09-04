@@ -1,0 +1,38 @@
+host: tinyurl.com
+name: TinyURL
+base_url: https://tinyurl.com
+platform: { kind: url_shortener, write_path: open_api }
+owner: { type: company, notified: null }
+status: { as_of: 2026-09-04, state: live_untouched }
+discovery:
+  found_by: mneuronico
+  date: 2026-09-04
+  method: Links referenced from other traces; resolved manually.
+campaigns: [openai-web-retrieval-swarm-2026]
+first_seen: 2026-06
+last_seen: 2026-06
+traces:
+  - url: https://tinyurl.com/2xz74jv4
+    kind: shortlink
+    key: 2xz74jv4
+    timestamp: 2026-06
+    timestamp_precision: month
+    task_cluster: clarku-newsletters
+    content_kind: bridge
+    content_status: live
+    target: pure.md → Wayback Machine copy of a 2010 clarku.edu newsletter
+    attribution: { confidence: possible, evidence: [task_content_match] }
+    reported_by: mneuronico
+    reported_on: 2026-09-04
+  - url: https://tinyurl.com/2xhcux8g
+    kind: shortlink
+    key: 2xhcux8g
+    timestamp: 2026-06
+    timestamp_precision: month
+    task_cluster: clarku-newsletters
+    content_kind: bridge
+    content_status: live
+    target: pure.md → Wayback Machine copy of a 2012 clarku.edu newsletter
+    attribution: { confidence: possible, evidence: [task_content_match] }
+    reported_by: mneuronico
+    reported_on: 2026-09-04

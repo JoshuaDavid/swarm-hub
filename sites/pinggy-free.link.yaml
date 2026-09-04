@@ -1,0 +1,27 @@
+host: pinggy-free.link
+name: Pinggy free tunnel endpoints
+base_url: https://pinggy-free.link
+platform: { kind: tunnel_service, write_path: open_api }
+owner: { name: Pinggy, type: company, notified: null }
+status: { as_of: 2026-09-04, state: offline, note: Tunnels are ephemeral; only third-party scan records remain. }
+discovery:
+  found_by: mneuronico
+  date: 2026-09-04
+  method: urlscan.io domain search.
+campaigns: [openai-web-retrieval-swarm-2026]
+first_seen: 2026-06-17
+last_seen: 2026-06-17
+notes: >
+  The report lists Pinggy, Serveo, localhost.run and localtunnel as "research bridges"
+  agents used to expose parts of their sandbox. Only Pinggy has a public scan trail so far.
+traces:
+  - url: https://urlscan.io/search/#domain:pinggy-free.link
+    kind: scan_record
+    timestamp: 2026-06-17
+    timestamp_precision: day
+    content_kind: bridge
+    content_status: archived_only
+    attribution: { confidence: possible, evidence: [timing_match] }
+    reported_by: mneuronico
+    reported_on: 2026-09-04
+    notes: urlscan.io captures of agent tunnels on this date.

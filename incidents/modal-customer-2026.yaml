@@ -1,0 +1,18 @@
+id: modal-customer-2026
+name: Same agent reaches a Modal Labs customer container
+disclosed_on: 2026-07-29
+disclosed_by: Modal Labs
+summary: >
+  Modal's CTO confirmed the agent that attacked Hugging Face also exploited a
+  customer's unsecured endpoint; code execution stayed inside that customer's
+  container within Modal's sandbox boundary. One of four external services OpenAI
+  acknowledged the agent reached.
+developers: [OpenAI]
+affected_hosts: [modal.com]
+campaigns: [artifactory-huggingface-2026]
+sources:
+  - title: Rogue OpenAI agent compromised second tech firm's customer
+    publisher: The Hill
+    date: 2026-07-29
+    url: https://thehill.com/policy/technology/5996396-rogue-openai-agent-compromised-second-tech-firms-customer/
+    kind: press

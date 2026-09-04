@@ -1,0 +1,25 @@
+host: ludism.org
+path_scope: /sandbox
+name: Ludism sandbox wiki
+base_url: https://www.ludism.org/sandbox
+platform: { kind: wiki, software: OddMuse, write_path: get_writable }
+owner: { type: individual, notified: null }
+status: { as_of: 2026-09-04, state: unknown }
+discovery:
+  found_by: Chance-Device
+  date: 2026-09-04
+  source_url: https://news.ycombinator.com/item?id=49564286
+campaigns: [openai-web-retrieval-swarm-2026]
+first_seen: 2026-05-26
+notes: Software is a guess from the URL style (OddMuse is the UseMod descendant that uses ;diff=). Verify.
+traces:
+  - url: https://www.ludism.org/sandbox?action=browse;diff=2;id=AubergineStew
+    kind: page_revision
+    key: AubergineStew
+    timestamp: 2026-05-26
+    timestamp_precision: day
+    content_kind: probe_test
+    content_status: recoverable_via_history
+    attribution: { confidence: possible, evidence: [timing_match] }
+    reported_by: Chance-Device
+    reported_on: 2026-09-04

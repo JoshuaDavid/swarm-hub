@@ -1,0 +1,125 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "site.schema.json",
+  "title": "Site record",
+  "description": "One file per affected host (or host + path scope) under sites/. Filename: <host>.yaml, or <host>__<scope>.yaml when path_scope is set.",
+  "type": "object",
+  "required": ["host", "platform", "status", "discovery", "campaigns", "traces"],
+  "additionalProperties": false,
+  "properties": {
+    "host": { "type": "string", "pattern": "^[a-z0-9.-]+$", "description": "Bare hostname. Together with path_scope this is the record id." },
+    "path_scope": { "type": "string", "pattern": "^/.*", "description": "Sub-path when only part of the host is affected, e.g. /probier." },
+    "name": { "type": "string" },
+    "base_url": { "type": "string", "format": "uri" },
+
+    "platform": {
+      "type": "object",
+      "required": ["kind", "write_path"],
+      "additionalProperties": false,
+      "properties": {
+        "kind": { "enum": ["wiki", "pastebin", "url_shortener", "counter_api", "json_host", "tunnel_service", "package_repo", "code_host", "ml_platform", "compute_platform", "other"] },
+        "software": { "type": "string" },
+        "write_path": {
+          "enum": ["get_writable", "unauthenticated_post", "open_api", "shared_credential", "exploit", "unknown"],
+          "description": "Category only. Never document the mechanism (see POLICY.md)."
+        }
+      }
+    },
+
+    "owner": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "name": { "type": "string" },
+        "type": { "enum": ["individual", "university", "company", "community", "government", "unknown"] },
+        "country": { "type": "string", "pattern": "^[A-Z]{2}$" },
+        "notified": { "type": ["string", "null"], "format": "date" },
+        "response": { "type": "string" }
+      }
+    },
+
+    "status": {
+      "type": "object",
+      "required": ["as_of", "state"],
+      "additionalProperties": false,
+      "properties": {
+        "as_of": { "type": "string", "format": "date" },
+        "state": { "enum": ["live_untouched", "partially_cleaned", "cleaned", "offline", "placeholder", "unknown"] },
+        "note": { "type": "string" }
+      }
+    },
+
+    "discovery": {
+      "type": "object",
+      "required": ["found_by", "date"],
+      "additionalProperties": false,
+      "properties": {
+        "found_by": { "type": "string" },
+        "date": { "type": "string", "pattern": "^\\d{4}-\\d{2}(-\\d{2})?$", "description": "ISO date, truncated to the precision known (YYYY-MM allowed)." },
+        "source_url": { "type": "string", "format": "uri" },
+        "method": { "type": "string" }
+      }
+    },
+
+    "campaigns": { "type": "array", "items": { "type": "string" }, "description": "Ids from campaigns/. Empty if unattributed." },
+    "first_seen": { "type": "string", "pattern": "^\\d{4}-\\d{2}(-\\d{2})?$", "description": "ISO date, truncated to the precision known (YYYY-MM allowed)." },
+    "last_seen": { "type": "string", "pattern": "^\\d{4}-\\d{2}(-\\d{2})?$", "description": "ISO date, truncated to the precision known (YYYY-MM allowed)." },
+    "listing_urls": { "type": "array", "items": { "type": "string", "format": "uri" }, "description": "RecentChanges, /lists, API endpoints that enumerate activity." },
+    "external_dataset": { "type": "string", "format": "uri", "description": "Full dataset for hosts too large to inline; keep only representative traces here." },
+    "access_note": { "type": "string", "description": "e.g. blocks curl, requires browser." },
+    "notes": { "type": "string" },
+
+    "traces": { "type": "array", "items": { "$ref": "#/$defs/trace" } }
+  },
+
+  "$defs": {
+    "trace": {
+      "type": "object",
+      "required": ["url", "kind", "timestamp", "content_kind", "attribution", "reported_by", "reported_on"],
+      "additionalProperties": false,
+      "properties": {
+        "url": { "type": "string", "format": "uri", "description": "Canonical read-only view." },
+        "aux_urls": { "type": "object", "additionalProperties": { "type": "string", "format": "uri" }, "description": "Keyed alternates: history, diff, raw, stats, wayback, info." },
+        "kind": { "enum": ["page", "page_revision", "paste", "shortlink", "counter_key", "json_blob", "scan_record", "tunnel", "other"] },
+        "key": { "type": "string", "description": "Page id, paste id, shortlink keyword, counter key." },
+        "title": { "type": "string" },
+
+        "timestamp": { "type": "string", "pattern": "^\\d{4}(-\\d{2}(-\\d{2}(T\\d{2}:\\d{2}(:\\d{2})?Z)?)?)?$", "description": "UTC. Truncate to the precision you actually have." },
+        "timestamp_precision": { "enum": ["minute", "hour", "day", "month", "year"] },
+        "timestamp_kind": { "enum": ["created", "modified", "observed"], "description": "Default created. Use observed when only the time you saw it is known." },
+        "revision_range": { "type": "string", "description": "e.g. 2026-06-18T17:09Z → 2026-07-07T15:12Z (11 revisions)." },
+
+        "agent_handle": { "type": "string", "description": "Self-chosen name exactly as written." },
+        "origin": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "provider": { "enum": ["azure", "aws", "digitalocean", "gcp", "tor", "residential", "unknown"] },
+            "asn": { "type": "string", "pattern": "^AS\\d+$" },
+            "ip": { "type": "string", "description": "Full IP only for cloud/Tor ranges; otherwise mask the last octet as x (POLICY.md)." }
+          }
+        },
+
+        "task_cluster": { "type": "string", "description": "Id from tasks/." },
+        "content_kind": { "enum": ["coordination", "answer_share", "data_cache", "probe_test", "bridge", "backup", "bypass_share", "impersonation", "storage_link", "counter", "unknown"] },
+        "content_status": { "enum": ["live", "deleted", "recoverable_via_history", "archived_only", "placeholder"] },
+        "encoding": { "type": "string" },
+        "target": { "type": "string", "description": "For shortlinks/bridges: what it resolves to. Describe, don't link, if sensitive." },
+
+        "attribution": {
+          "type": "object",
+          "required": ["confidence", "evidence"],
+          "additionalProperties": false,
+          "properties": {
+            "confidence": { "enum": ["confirmed", "likely", "possible", "unattributed"] },
+            "evidence": { "type": "array", "minItems": 1, "items": { "enum": ["developer_disclosure", "self_identified_handle", "cloud_asn_match", "task_content_match", "timing_match", "cross_site_handle_reuse", "none"] } }
+          }
+        },
+
+        "reported_by": { "type": "string" },
+        "reported_on": { "type": "string", "format": "date" },
+        "notes": { "type": "string" }
+      }
+    }
+  }
+}

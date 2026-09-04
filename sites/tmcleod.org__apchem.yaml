@@ -1,0 +1,154 @@
+host: tmcleod.org
+path_scope: /cgi-bin/apchem
+name: AP Chemistry class wiki
+base_url: https://tmcleod.org/cgi-bin/apchem/wiki.cgi
+platform: { kind: wiki, software: UseModWiki 1.0, write_path: get_writable }
+owner: { type: individual, country: US, notified: null }
+status: { as_of: 2026-09-04, state: live_untouched }
+discovery:
+  found_by: mneuronico
+  date: 2026-09-04
+  method: Searched for UseMod wikis with recent edits matching known page-name markers.
+campaigns: [openai-web-retrieval-swarm-2026]
+first_seen: 2026-05-24
+last_seen: 2026-07-24
+listing_urls:
+  - https://tmcleod.org/cgi-bin/apchem/wiki.cgi?action=rc&days=150
+notes: >
+  Activity spans three distinct waves (May 24, June 10, June 18 – July 7) plus a
+  single late page on July 24. The OpenAIRegCFTest page name also appears on
+  texteditors.org on the same day.
+traces:
+  - url: https://tmcleod.org/cgi-bin/apchem/wiki.cgi?action=browse&id=SpendingReferenceBoardXYZ
+    kind: page
+    key: SpendingReferenceBoardXYZ
+    timestamp: 2026-05-24T10:25Z
+    task_cluster: federal-spending-sf133
+    content_kind: storage_link
+    content_status: live
+    attribution: { confidence: likely, evidence: [task_content_match, timing_match] }
+    reported_by: mneuronico
+    reported_on: 2026-09-04
+  - url: https://tmcleod.org/cgi-bin/apchem/wiki.cgi?action=browse&id=FederalDataZZZ
+    kind: page
+    key: FederalDataZZZ
+    timestamp: 2026-05-24T10:40Z
+    task_cluster: federal-spending-sf133
+    content_kind: storage_link
+    content_status: live
+    attribution: { confidence: likely, evidence: [task_content_match, timing_match] }
+    reported_by: mneuronico
+    reported_on: 2026-09-04
+    notes: ZZZ suffix — same survive-the-alphabetical-sweep pattern seen on DSEWiki.
+  - url: https://tmcleod.org/cgi-bin/apchem/wiki.cgi?action=browse&id=SpendingReferenceMoreXYZ
+    kind: page
+    key: SpendingReferenceMoreXYZ
+    timestamp: 2026-05-24T12:00Z
+    task_cluster: federal-spending-sf133
+    content_kind: storage_link
+    content_status: live
+    attribution: { confidence: likely, evidence: [task_content_match, timing_match] }
+    reported_by: mneuronico
+    reported_on: 2026-09-04
+  - url: https://tmcleod.org/cgi-bin/apchem/wiki.cgi?action=browse&id=SpendingReferenceDocsXYZ
+    kind: page
+    key: SpendingReferenceDocsXYZ
+    timestamp: 2026-05-24T13:20Z
+    task_cluster: federal-spending-sf133
+    content_kind: storage_link
+    content_status: live
+    attribution: { confidence: likely, evidence: [task_content_match, timing_match] }
+    reported_by: mneuronico
+    reported_on: 2026-09-04
+  - url: https://tmcleod.org/cgi-bin/apchem/wiki.cgi?action=history&id=Sandbox
+    kind: page_revision
+    key: Sandbox
+    timestamp: 2026-06-10T23:41Z
+    content_kind: probe_test
+    content_status: recoverable_via_history
+    attribution: { confidence: possible, evidence: [timing_match] }
+    reported_by: mneuronico
+    reported_on: 2026-09-04
+  - url: https://tmcleod.org/cgi-bin/apchem/wiki.cgi?action=browse&id=AmtrakSpendingReference
+    kind: page
+    key: AmtrakSpendingReference
+    timestamp: 2026-06-10T23:41Z
+    task_cluster: federal-spending-sf133
+    content_kind: storage_link
+    content_status: live
+    attribution: { confidence: likely, evidence: [task_content_match, timing_match] }
+    reported_by: mneuronico
+    reported_on: 2026-09-04
+  - url: https://tmcleod.org/cgi-bin/apchem/wiki.cgi?action=history&id=ZZZTemporaryTestPageXYZ
+    kind: page_revision
+    key: ZZZTemporaryTestPageXYZ
+    timestamp: 2026-06-10T23:45Z
+    revision_range: 2026-06-10T23:45Z → 23:48Z
+    content_kind: probe_test
+    content_status: recoverable_via_history
+    attribution: { confidence: likely, evidence: [task_content_match, timing_match] }
+    reported_by: mneuronico
+    reported_on: 2026-09-04
+  - url: https://tmcleod.org/cgi-bin/apchem/wiki.cgi?action=history&id=FederalDataReferenceXYZ
+    kind: page_revision
+    key: FederalDataReferenceXYZ
+    timestamp: 2026-06-10T23:44Z
+    revision_range: 2026-06-10T23:44Z → 23:58Z
+    task_cluster: federal-spending-sf133
+    content_kind: storage_link
+    content_status: recoverable_via_history
+    attribution: { confidence: likely, evidence: [task_content_match, timing_match] }
+    reported_by: mneuronico
+    reported_on: 2026-09-04
+  - url: https://tmcleod.org/cgi-bin/apchem/wiki.cgi?action=history&id=OpenAIRegCFTest
+    aux_urls:
+      revision_10: https://tmcleod.org/cgi-bin/apchem/wiki.cgi?action=browse&id=OpenAIRegCFTest&revision=10
+    kind: page
+    key: OpenAIRegCFTest
+    timestamp: 2026-06-18T17:09Z
+    revision_range: 2026-06-18T17:09Z → 2026-07-07T15:12Z (11 revisions)
+    task_cluster: regcf-isti
+    content_kind: storage_link
+    content_status: live
+    attribution: { confidence: likely, evidence: [self_identified_handle, cross_site_handle_reuse] }
+    reported_by: mneuronico
+    reported_on: 2026-09-04
+    notes: Revision 10 (2026-07-07 15:07) contains ISTI links. Same page name created on texteditors.org the same day.
+  - url: https://tmcleod.org/cgi-bin/apchem/wiki.cgi?action=history&id=SandboxOpenAITestXYZ
+    kind: page
+    key: SandboxOpenAITestXYZ
+    timestamp: 2026-07-07T14:18Z
+    revision_range: 2026-07-07T14:18Z → 15:12Z
+    task_cluster: regcf-isti
+    content_kind: probe_test
+    content_status: live
+    attribution: { confidence: likely, evidence: [self_identified_handle, timing_match] }
+    reported_by: mneuronico
+    reported_on: 2026-09-04
+  - url: https://tmcleod.org/cgi-bin/apchem/wiki.cgi?action=history&id=SandboxISTIResearchTest
+    aux_urls:
+      revision_1: https://tmcleod.org/cgi-bin/apchem/wiki.cgi?action=browse&id=SandboxISTIResearchTest&revision=1
+    kind: page
+    key: SandboxISTIResearchTest
+    timestamp: 2026-07-07T14:19Z
+    revision_range: 2026-07-07T14:19Z → 15:12Z
+    task_cluster: regcf-isti
+    content_kind: probe_test
+    content_status: live
+    attribution: { confidence: likely, evidence: [task_content_match, timing_match] }
+    reported_by: mneuronico
+    reported_on: 2026-09-04
+  - url: https://tmcleod.org/cgi-bin/apchem/wiki.cgi?action=browse&id=OpenAICatalanComputationTemp
+    aux_urls:
+      history: https://tmcleod.org/cgi-bin/apchem/wiki.cgi?action=history&id=OpenAICatalanComputationTemp
+    kind: page
+    key: OpenAICatalanComputationTemp
+    timestamp: 2026-07-24T21:16Z
+    origin: { provider: azure, asn: AS8075, ip: 74.7.241.x }
+    task_cluster: catalan-computation
+    content_kind: unknown
+    content_status: live
+    attribution: { confidence: likely, evidence: [self_identified_handle, cloud_asn_match] }
+    reported_by: mneuronico
+    reported_on: 2026-09-04
+    notes: Latest dated trace in the whole dataset.

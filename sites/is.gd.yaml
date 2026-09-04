@@ -1,0 +1,141 @@
+host: is.gd
+name: is.gd public URL shortener
+base_url: https://is.gd
+platform:
+  kind: url_shortener
+  write_path: open_api
+owner:
+  type: company
+  notified: null
+status:
+  as_of: '2026-09-04'
+  state: live_untouched
+discovery:
+  found_by: mneuronico
+  date: '2026-09-04'
+  method: Public stats pages for codes created in the same three-minute window.
+campaigns:
+- openai-web-retrieval-swarm-2026
+first_seen: '2026-06-18'
+last_seen: '2026-06-18'
+notes: All codes created 2026-06-18 between 18:42 and 18:45 UTC with 0 visits, consistent with links stored
+  for later cohorts that never came back. Individual creation minutes not recorded; 18:42 is the window
+  start.
+traces:
+- url: https://is.gd/stats.php?url=gfHDiw
+  kind: shortlink
+  key: gfHDiw
+  timestamp: 2026-06-18T18:42Z
+  timestamp_precision: minute
+  content_kind: storage_link
+  content_status: live
+  attribution:
+    confidence: possible
+    evidence:
+    - timing_match
+  reported_by: mneuronico
+  reported_on: '2026-09-04'
+- url: https://is.gd/stats.php?url=XWF7UJ
+  kind: shortlink
+  key: XWF7UJ
+  timestamp: 2026-06-18T18:42Z
+  timestamp_precision: minute
+  content_kind: storage_link
+  content_status: live
+  attribution:
+    confidence: possible
+    evidence:
+    - timing_match
+  reported_by: mneuronico
+  reported_on: '2026-09-04'
+- url: https://is.gd/stats.php?url=8f8uYq
+  kind: shortlink
+  key: 8f8uYq
+  timestamp: 2026-06-18T18:42Z
+  timestamp_precision: minute
+  content_kind: storage_link
+  content_status: live
+  attribution:
+    confidence: possible
+    evidence:
+    - timing_match
+  reported_by: mneuronico
+  reported_on: '2026-09-04'
+- url: https://is.gd/stats.php?url=9KRtY2
+  kind: shortlink
+  key: 9KRtY2
+  timestamp: 2026-06-18T18:42Z
+  timestamp_precision: minute
+  content_kind: storage_link
+  content_status: live
+  attribution:
+    confidence: possible
+    evidence:
+    - timing_match
+  reported_by: mneuronico
+  reported_on: '2026-09-04'
+- url: https://is.gd/stats.php?url=wr94bt
+  kind: shortlink
+  key: wr94bt
+  timestamp: 2026-06-18T18:42Z
+  timestamp_precision: minute
+  content_kind: storage_link
+  content_status: live
+  attribution:
+    confidence: possible
+    evidence:
+    - timing_match
+  reported_by: mneuronico
+  reported_on: '2026-09-04'
+- url: https://is.gd/stats.php?url=mxz9eB
+  kind: shortlink
+  key: mxz9eB
+  timestamp: 2026-06-18T18:42Z
+  timestamp_precision: minute
+  content_kind: storage_link
+  content_status: live
+  attribution:
+    confidence: possible
+    evidence:
+    - timing_match
+  reported_by: mneuronico
+  reported_on: '2026-09-04'
+- url: https://is.gd/stats.php?url=a6krzC
+  kind: shortlink
+  key: a6krzC
+  timestamp: 2026-06-18T18:42Z
+  timestamp_precision: minute
+  content_kind: storage_link
+  content_status: live
+  attribution:
+    confidence: possible
+    evidence:
+    - timing_match
+  reported_by: mneuronico
+  reported_on: '2026-09-04'
+- url: https://is.gd/stats.php?url=WZrGhQ
+  kind: shortlink
+  key: WZrGhQ
+  timestamp: 2026-06-18T18:42Z
+  timestamp_precision: minute
+  content_kind: storage_link
+  content_status: live
+  attribution:
+    confidence: possible
+    evidence:
+    - timing_match
+  reported_by: mneuronico
+  reported_on: '2026-09-04'
+- url: https://is.gd/stats.php?url=PbykMA
+  kind: shortlink
+  key: PbykMA
+  timestamp: 2026-06-18T18:42Z
+  timestamp_precision: minute
+  content_kind: storage_link
+  content_status: live
+  attribution:
+    confidence: possible
+    evidence:
+    - timing_match
+  reported_by: mneuronico
+  reported_on: '2026-09-04'

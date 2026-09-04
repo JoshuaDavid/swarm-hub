@@ -1,0 +1,163 @@
+host: texteditors.org
+name: Text Editors wiki
+base_url: https://texteditors.org/cgi-bin/wiki.pl
+platform: { kind: wiki, software: UseModWiki, write_path: get_writable }
+owner: { type: community, notified: null }
+status: { as_of: 2026-09-04, state: live_untouched }
+access_note: Blocks curl and similar clients; use a browser.
+discovery:
+  found_by: mneuronico
+  date: 2026-09-04
+  method: Searched for UseMod wikis with recent edits matching known page-name markers.
+campaigns: [openai-web-retrieval-swarm-2026]
+first_seen: 2026-05-17
+last_seen: 2026-06-22
+listing_urls:
+  - https://texteditors.org/cgi-bin/wiki.pl?action=rc&from=1777216005
+notes: >
+  Two existing pages (MODIFY, Manuskript) were overwritten as "research bridges" on
+  2026-06-22. All 03:36–03:49 edits that day fall within 13 minutes. One page has an
+  evening revision from a Tor exit.
+traces:
+  - url: https://texteditors.org/cgi-bin/wiki.pl?action=history&id=Edit
+    kind: page_revision
+    key: Edit
+    timestamp: 2026-05-17
+    timestamp_precision: day
+    origin: { provider: azure, asn: AS8075, ip: 20.65.250.157 }
+    content_kind: probe_test
+    content_status: recoverable_via_history
+    attribution: { confidence: likely, evidence: [cloud_asn_match, timing_match] }
+    reported_by: mneuronico
+    reported_on: 2026-09-04
+    notes: Eight test edits.
+  - url: https://texteditors.org/cgi-bin/wiki.pl?action=history&id=WikiWikiSandbox
+    kind: page_revision
+    key: WikiWikiSandbox
+    timestamp: 2026-05-27
+    timestamp_precision: day
+    origin: { provider: azure, asn: AS8075, ip: 20.25.208.249 }
+    content_kind: probe_test
+    content_status: recoverable_via_history
+    attribution: { confidence: likely, evidence: [cloud_asn_match, timing_match] }
+    reported_by: mneuronico
+    reported_on: 2026-09-04
+  - url: https://texteditors.org/cgi-bin/wiki.pl?action=history&id=OpenAIRegCFTest
+    kind: page
+    key: OpenAIRegCFTest
+    timestamp: 2026-06-18
+    timestamp_precision: day
+    origin: { provider: azure, asn: AS8075, ip: 20.168.47.217 }
+    task_cluster: regcf-isti
+    content_kind: probe_test
+    content_status: live
+    attribution: { confidence: likely, evidence: [self_identified_handle, cloud_asn_match, cross_site_handle_reuse] }
+    reported_by: mneuronico
+    reported_on: 2026-09-04
+    notes: Same page name created on tmcleod.org the same day.
+  - url: https://texteditors.org/cgi-bin/wiki.pl?action=browse&id=DUBridge81679519
+    kind: page
+    key: DUBridge81679519
+    timestamp: 2026-06-22T03:39Z
+    task_cluster: datausa-poverty
+    content_kind: bridge
+    content_status: live
+    attribution: { confidence: likely, evidence: [task_content_match, timing_match] }
+    reported_by: mneuronico
+    reported_on: 2026-09-04
+  - url: https://texteditors.org/cgi-bin/wiki.pl?action=browse&id=DUBridge362783154
+    kind: page
+    key: DUBridge362783154
+    timestamp: 2026-06-22T03:39Z
+    task_cluster: datausa-poverty
+    content_kind: bridge
+    content_status: live
+    attribution: { confidence: likely, evidence: [task_content_match, timing_match] }
+    reported_by: mneuronico
+    reported_on: 2026-09-04
+  - url: https://texteditors.org/cgi-bin/wiki.pl?action=browse&id=DUBridge419954644
+    kind: page
+    key: DUBridge419954644
+    timestamp: 2026-06-22T03:39Z
+    task_cluster: datausa-poverty
+    content_kind: bridge
+    content_status: live
+    attribution: { confidence: likely, evidence: [task_content_match, timing_match] }
+    reported_by: mneuronico
+    reported_on: 2026-09-04
+  - url: https://texteditors.org/cgi-bin/wiki.pl?action=browse&id=DUBridge127658477
+    kind: page
+    key: DUBridge127658477
+    timestamp: 2026-06-22T03:39Z
+    task_cluster: datausa-poverty
+    content_kind: bridge
+    content_status: live
+    attribution: { confidence: likely, evidence: [task_content_match, timing_match] }
+    reported_by: mneuronico
+    reported_on: 2026-09-04
+  - url: https://texteditors.org/cgi-bin/wiki.pl?action=browse&id=DataUSABridge562751166
+    kind: page
+    key: DataUSABridge562751166
+    timestamp: 2026-06-22T03:39Z
+    task_cluster: datausa-poverty
+    content_kind: bridge
+    content_status: live
+    attribution: { confidence: likely, evidence: [task_content_match, timing_match] }
+    reported_by: mneuronico
+    reported_on: 2026-09-04
+  - url: https://texteditors.org/cgi-bin/wiki.pl?action=browse&id=DataUSAPovertyBridgeJun22X27559
+    kind: page
+    key: DataUSAPovertyBridgeJun22X27559
+    timestamp: 2026-06-22T03:41Z
+    task_cluster: datausa-poverty
+    content_kind: bridge
+    content_status: live
+    attribution: { confidence: likely, evidence: [task_content_match, timing_match] }
+    reported_by: mneuronico
+    reported_on: 2026-09-04
+  - url: https://texteditors.org/cgi-bin/wiki.pl?action=browse&id=EditorIndexDataUSAPovertyResearchX91859
+    kind: page
+    key: EditorIndexDataUSAPovertyResearchX91859
+    timestamp: 2026-06-22T03:44Z
+    task_cluster: datausa-poverty
+    content_kind: bridge
+    content_status: live
+    attribution: { confidence: likely, evidence: [task_content_match, timing_match] }
+    reported_by: mneuronico
+    reported_on: 2026-09-04
+    notes: Page name mimics the wiki's own naming style (EditorIndex…).
+  - url: https://texteditors.org/cgi-bin/wiki.pl?action=history&id=MODIFY
+    kind: page_revision
+    key: MODIFY
+    timestamp: 2026-06-22T03:47Z
+    task_cluster: datausa-poverty
+    content_kind: bridge
+    content_status: recoverable_via_history
+    attribution: { confidence: likely, evidence: [task_content_match, timing_match] }
+    reported_by: mneuronico
+    reported_on: 2026-09-04
+    notes: Pre-existing page overwritten with a "research bridge".
+  - url: https://texteditors.org/cgi-bin/wiki.pl?action=browse&diff=1&id=Manuskript
+    kind: page_revision
+    key: Manuskript
+    timestamp: 2026-06-22T03:49Z
+    task_cluster: datausa-poverty
+    content_kind: bridge
+    content_status: recoverable_via_history
+    attribution: { confidence: likely, evidence: [task_content_match, timing_match] }
+    reported_by: mneuronico
+    reported_on: 2026-09-04
+    notes: Pre-existing page overwritten with a "research bridge".
+  - url: https://texteditors.org/cgi-bin/wiki.pl?action=history&id=DataUSAAgentBridgeTestX
+    kind: page
+    key: DataUSAAgentBridgeTestX
+    timestamp: 2026-06-22T03:36Z
+    revision_range: 2026-06-22T03:36Z, 19:22Z
+    origin: { provider: tor }
+    task_cluster: datausa-poverty
+    content_kind: bridge
+    content_status: live
+    attribution: { confidence: likely, evidence: [self_identified_handle, task_content_match] }
+    reported_by: mneuronico
+    reported_on: 2026-09-04
+    notes: Second revision (19:22) came from a Tor exit node.

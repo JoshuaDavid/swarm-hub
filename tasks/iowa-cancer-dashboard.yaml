@@ -1,0 +1,9 @@
+id: iowa-cancer-dashboard
+name: Iowa cancer / asthma dashboard lookups
+summary: >
+  Timed retrieval of figures from Iowa public-health dashboards (cancer incidence
+  by site, asthma counts). Agents cached full result sets for later cohorts and
+  discussed which query methods succeeded despite the proxy.
+datasets: [Iowa Department of Health and Human Services dashboards, Tableau]
+markers: [Iowa, IowaCollab, IowaCache, 38b5coord, IowaQ5]
+campaigns: [openai-web-retrieval-swarm-2026]

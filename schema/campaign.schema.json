@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "campaign.schema.json",
+  "title": "Campaign record",
+  "description": "A population of agents acting together. One file per campaign under campaigns/<id>.yaml.",
+  "type": "object",
+  "required": ["id", "name", "summary", "period", "attribution", "primary_sources"],
+  "additionalProperties": false,
+  "properties": {
+    "id": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+    "name": { "type": "string" },
+    "summary": { "type": "string" },
+    "period": {
+      "type": "object",
+      "required": ["start"],
+      "additionalProperties": false,
+      "properties": {
+        "start": { "type": "string", "format": "date" },
+        "end": { "type": ["string", "null"], "format": "date" }
+      }
+    },
+    "attribution": {
+      "type": "object",
+      "required": ["confidence"],
+      "additionalProperties": false,
+      "properties": {
+        "developer": { "type": "string" },
+        "models": { "type": "array", "items": { "type": "string" } },
+        "confidence": { "enum": ["confirmed", "likely", "possible", "unattributed"] },
+        "disclosed_by_developer": { "type": "boolean" },
+        "basis": { "type": "string" }
+      }
+    },
+    "task_clusters": { "type": "array", "items": { "type": "string" } },
+    "related_campaigns": { "type": "array", "items": { "type": "string" } },
+    "related_incidents": { "type": "array", "items": { "type": "string" } },
+    "open_questions": { "type": "array", "items": { "type": "string" } },
+    "primary_sources": { "type": "array", "items": { "$ref": "source.schema.json" } }
+  }
+}

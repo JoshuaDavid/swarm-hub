@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "source.schema.json",
+  "title": "Source citation",
+  "type": "object",
+  "required": ["title", "publisher", "date"],
+  "additionalProperties": false,
+  "properties": {
+    "title": { "type": "string" },
+    "publisher": { "type": "string" },
+    "date": { "type": "string", "format": "date" },
+    "url": { "type": "string", "format": "uri" },
+    "kind": { "enum": ["primary", "investigation", "press", "discussion"] }
+  }
+}

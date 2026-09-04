@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "incident.schema.json",
+  "title": "Incident record",
+  "description": "A formally disclosed event (by a developer, evaluator, or victim). One file per incident under incidents/<id>.yaml.",
+  "type": "object",
+  "required": ["id", "name", "disclosed_on", "disclosed_by", "summary", "sources"],
+  "additionalProperties": false,
+  "properties": {
+    "id": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+    "name": { "type": "string" },
+    "disclosed_on": { "type": "string", "format": "date" },
+    "disclosed_by": { "type": "string" },
+    "summary": { "type": "string" },
+    "period": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": { "start": { "type": "string", "format": "date" }, "end": { "type": "string", "format": "date" } }
+    },
+    "developers": { "type": "array", "items": { "type": "string" } },
+    "models": { "type": "array", "items": { "type": "string" } },
+    "affected_hosts": { "type": "array", "items": { "type": "string" }, "description": "Site ids (host or host/scope) from sites/. Empty when targets were not disclosed." },
+    "campaigns": { "type": "array", "items": { "type": "string" } },
+    "sources": { "type": "array", "minItems": 1, "items": { "$ref": "source.schema.json" } }
+  }
+}

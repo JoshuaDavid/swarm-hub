@@ -1,0 +1,93 @@
+name: Report a site
+description: A host (or a single page/paste/link) where autonomous agents left traces. No YAML needed.
+title: "[site] <host>"
+labels: ["triage", "new-site"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Look, don't touch.** Do not edit, delete, or test anything on the site you're reporting.
+        **Do not describe how the site can be written to** — only that it was. See POLICY.md.
+  - type: input
+    id: host
+    attributes: { label: Host, placeholder: paste.linuxiarz.pl }
+    validations: { required: true }
+  - type: input
+    id: scope
+    attributes: { label: Path scope (if only part of the host), placeholder: /cgi-bin/apchem }
+  - type: dropdown
+    id: platform_kind
+    attributes:
+      label: Platform kind
+      options: [wiki, pastebin, url_shortener, counter_api, json_host, tunnel_service, package_repo, code_host, other]
+    validations: { required: true }
+  - type: input
+    id: software
+    attributes: { label: Software (if known), placeholder: UseModWiki 1.0 / YOURLS / Stikked }
+  - type: textarea
+    id: listing_urls
+    attributes:
+      label: Listing URLs
+      description: RecentChanges, /lists, API endpoints that enumerate activity — one per line.
+  - type: textarea
+    id: traces
+    attributes:
+      label: Traces
+      description: "One per line: `URL | date (UTC) | agent handle | title or key`. Prefix approximate dates with ~."
+      placeholder: |
+        https://example.org/view/abc123 | 2026-06-16 | agent-1147 | 38b5coord
+        https://example.org/view/def456 | ~2026-06 | — | RefQ3
+    validations: { required: true }
+  - type: dropdown
+    id: content_kinds
+    attributes:
+      label: What the traces contain
+      multiple: true
+      options: [coordination, answer_share, data_cache, probe_test, bridge, backup, bypass_share, impersonation, storage_link, counter, unknown]
+  - type: dropdown
+    id: campaign
+    attributes:
+      label: Which campaign does this look like?
+      options:
+        - openai-web-retrieval-swarm-2026 (DataUSA / IPEDS / Iowa / state questions, May–Jul)
+        - artifactory-huggingface-2026
+        - other / unsure
+    validations: { required: true }
+  - type: dropdown
+    id: confidence
+    attributes:
+      label: Attribution confidence
+      description: confirmed = developer disclosed · likely = handle + ASN or task match · possible = one weak signal · unattributed = nothing beyond "looks automated"
+      options: [confirmed, likely, possible, unattributed]
+    validations: { required: true }
+  - type: checkboxes
+    id: evidence
+    attributes:
+      label: Evidence
+      options:
+        - label: Self-identified handle (OpenAIResearcher, agent-NNNN, …)
+        - label: Source IP in a cloud or Tor range (give the ASN in notes)
+        - label: Content matches a known task cluster
+        - label: Timing matches a known campaign window
+        - label: Same handle seen on another listed site
+  - type: dropdown
+    id: state
+    attributes:
+      label: Current state of the site
+      options: [live_untouched, partially_cleaned, cleaned, offline, placeholder, unknown]
+    validations: { required: true }
+  - type: dropdown
+    id: owner_notified
+    attributes:
+      label: Has the site owner been notified?
+      options: ["No", "Yes — I did", "Yes — someone else did", "Don't know"]
+    validations: { required: true }
+  - type: input
+    id: source
+    attributes: { label: "Where did you find this? (HN comment URL, report page, or 'own search')" }
+    validations: { required: true }
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes
+      description: ASN, encoding, visit counts, oddities. No personal data. No mechanisms.

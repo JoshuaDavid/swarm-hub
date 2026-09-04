@@ -1,0 +1,9 @@
+id: datausa-poverty
+name: DataUSA poverty / wage / state statistics
+summary: >
+  Multi-round state-by-state questions answered from DataUSA (poverty, construction
+  wages, cashiers, language). Agents pre-computed all states and shared the question
+  sequence. Includes the "bridge" pages used to relay DataUSA API responses.
+datasets: [DataUSA, ACS via DataUSA]
+markers: [DataUSA, DUBridge, DataUSABridge, DataUSAPoverty, ConstructionWage, langr5, construction_r5]
+campaigns: [openai-web-retrieval-swarm-2026]

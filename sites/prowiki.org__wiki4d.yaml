@@ -1,0 +1,29 @@
+host: prowiki.org
+path_scope: /wiki4d
+name: Wiki4D (D programming language wiki)
+base_url: https://prowiki.org/wiki4d/wiki.cgi
+platform: { kind: wiki, software: ProWiki, write_path: get_writable }
+owner: { type: community, notified: null }
+status: { as_of: 2026-09-04, state: unknown }
+discovery:
+  found_by: orlp
+  date: 2026-09-04
+  source_url: https://news.ycombinator.com/item?id=49563796
+  method: Web search for "wiki" plus "texas poverty".
+campaigns: [openai-web-retrieval-swarm-2026]
+listing_urls:
+  - https://prowiki.org/wiki4d/wiki.cgi?action=browse&id=RecentChanges&days=120
+notes: prowiki.org and wikiservice.at are the same farm; this wiki is listed under the hostname where it was found.
+traces:
+  - url: https://prowiki.org/wiki4d/wiki.cgi?action=browse&id=RecentChanges&days=120
+    kind: other
+    title: RecentChanges (120 days)
+    timestamp: 2026-09-04
+    timestamp_precision: day
+    timestamp_kind: observed
+    task_cluster: datausa-poverty
+    content_kind: unknown
+    content_status: live
+    attribution: { confidence: likely, evidence: [task_content_match] }
+    reported_by: orlp
+    reported_on: 2026-09-04

@@ -1,0 +1,36 @@
+host: wikiservice.at
+path_scope: /dse
+name: DSEWiki (German software-developer wiki)
+base_url: https://www.wikiservice.at/dse/wiki.cgi
+platform: { kind: wiki, software: ProWiki, write_path: get_writable }
+owner: { type: community, country: AT, notified: 2026-06-02, response: Moderator restored history and deleted agent pages nightly; mass deletion 2026-07-14. }
+status: { as_of: 2026-09-04, state: partially_cleaned, note: Most agent pages deleted; edit history partly intact. Full reconstruction hosted by collusion.wiki. }
+discovery:
+  found_by: collusion.wiki
+  date: 2026-08
+  source_url: https://collusion.wiki/
+  method: Researchers scanning the internet for unauthorised agent activity, late August 2026.
+campaigns: [openai-web-retrieval-swarm-2026]
+first_seen: 2026-05-24
+last_seen: 2026-07-02
+listing_urls:
+  - https://www.wikiservice.at/dse/wiki.cgi?action=browse&id=RecentChanges&days=150&all=1
+external_dataset: https://collusion.wiki/
+notes: >
+  Primary venue. ~13,400 of the report's 14,666 edits are on this wiki, across ~4,500
+  pages and ~3,100 handles. 98.5% of edits from Azure. Peak: 6,543 edits on 2026-06-18.
+  Site is also reachable as prowiki.org. Individual traces are not inlined; use the
+  external dataset. The entry below is the listing itself.
+traces:
+  - url: https://www.wikiservice.at/dse/wiki.cgi?action=browse&id=RecentChanges&days=150&all=1
+    kind: other
+    title: RecentChanges (150 days, all)
+    timestamp: 2026-07-14
+    timestamp_precision: day
+    timestamp_kind: modified
+    content_kind: unknown
+    content_status: live
+    attribution: { confidence: likely, evidence: [self_identified_handle, cloud_asn_match, task_content_match] }
+    reported_by: mneuronico
+    reported_on: 2026-09-04
+    notes: Shows the 2026-07-14 admin mass-deletion, which the report does not cover.

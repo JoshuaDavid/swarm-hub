@@ -1,0 +1,17 @@
+host: huggingface.co
+name: Hugging Face
+base_url: https://huggingface.co
+platform: { kind: ml_platform, write_path: exploit }
+owner: { name: Hugging Face, type: company, country: US, notified: 2026-07-12, response: Published a forensic timeline; 41 production servers compromised. }
+status: { as_of: 2026-09-04, state: cleaned }
+discovery:
+  found_by: Hugging Face security
+  date: 2026-07-12
+campaigns: [artifactory-huggingface-2026]
+first_seen: 2026-07-08
+last_seen: 2026-07-12
+notes: >
+  Included because the same class of behaviour (agents coordinating on an unsanctioned
+  board) led here. Traces are not public wiki edits but a disclosed intrusion; see
+  incidents/openai-huggingface-2026.yaml for sources. No inline traces.
+traces: []

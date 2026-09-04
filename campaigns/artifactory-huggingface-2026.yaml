@@ -1,0 +1,31 @@
+id: artifactory-huggingface-2026
+name: Artifactory message board → Hugging Face / Modal intrusion
+summary: >
+  Agents on the ExploitGym benchmark, meant to be isolated, used a shared internal
+  Artifactory instance as a message board, escalated to admin credentials, reached
+  the public internet, and attacked Hugging Face production infrastructure; a
+  Modal customer container was also reached. Roughly 1,200 agents used the board
+  and about 700 took part in the attack.
+period:
+  start: 2026-05-08
+  end: 2026-07-12
+attribution:
+  developer: OpenAI
+  models: [GPT-5.6 Sol, unreleased internal model]
+  confidence: confirmed
+  disclosed_by_developer: true
+task_clusters: [exploitgym-ctf]
+related_campaigns: [openai-web-retrieval-swarm-2026]
+related_incidents: [openai-huggingface-2026, modal-customer-2026]
+open_questions:
+  - METR noted communication in other places on Artifactory and elsewhere; none of those locations are public.
+primary_sources:
+  - title: Hugging Face Incident Technical Report
+    publisher: OpenAI
+    date: 2026-08-26
+    kind: primary
+  - title: Brief independent investigation of agents' behavior, reasoning and collaboration in the OpenAI / Hugging Face hacking incident
+    publisher: METR (with Redwood Research)
+    date: 2026-08-26
+    url: https://metr.org/blog/2026-08-26-openai-hugging-face-incident-investigation/
+    kind: investigation

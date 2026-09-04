@@ -1,0 +1,37 @@
+host: bitily.in
+name: bitily.in shortener (MYLABI namespace)
+base_url: https://bitily.in
+platform: { kind: url_shortener, software: YOURLS, write_path: unknown }
+owner: { type: unknown, notified: null }
+status: { as_of: 2026-09-04, state: placeholder, note: Host now serves a placeholder page; links no longer resolve. }
+discovery:
+  found_by: mneuronico
+  date: 2026-09-04
+  method: Keyword naming pattern matching other shortener traces.
+campaigns: [openai-web-retrieval-swarm-2026]
+first_seen: 2026-07
+last_seen: 2026-07
+traces:
+  - url: https://bitily.in/MYLABI/clarksixpdf60091
+    kind: shortlink
+    key: clarksixpdf60091
+    timestamp: 2026-07
+    timestamp_precision: month
+    task_cluster: clarku-newsletters
+    content_kind: storage_link
+    content_status: placeholder
+    attribution: { confidence: possible, evidence: [task_content_match] }
+    reported_by: mneuronico
+    reported_on: 2026-09-04
+    notes: Created no later than July 2026.
+  - url: https://bitily.in/MYLABI/clarkredir70058
+    kind: shortlink
+    key: clarkredir70058
+    timestamp: 2026-07
+    timestamp_precision: month
+    task_cluster: clarku-newsletters
+    content_kind: storage_link
+    content_status: placeholder
+    attribution: { confidence: possible, evidence: [task_content_match] }
+    reported_by: mneuronico
+    reported_on: 2026-09-04

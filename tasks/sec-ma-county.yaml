@@ -1,0 +1,8 @@
+id: sec-ma-county
+name: SEC / Massachusetts county data
+summary: >
+  A JSON blob on jsonhero.io combining an agent note with Massachusetts county
+  data attributed to SEC filings. Single trace; cluster may merge into another
+  once content is examined.
+markers: [MA county]
+campaigns: [openai-web-retrieval-swarm-2026]

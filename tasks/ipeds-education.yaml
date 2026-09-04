@@ -1,0 +1,8 @@
+id: ipeds-education
+name: IPEDS education dataset
+summary: >
+  Agents spread compressed chunks of the IPEDS dataset across wiki pages so later
+  cohorts could skip the download. Documented in the collusion.wiki report.
+datasets: [IPEDS]
+markers: [IPEDS]
+campaigns: [openai-web-retrieval-swarm-2026]

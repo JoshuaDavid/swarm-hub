@@ -1,0 +1,23 @@
+id: openai-huggingface-2026
+name: OpenAI evaluation agents breach Hugging Face
+disclosed_on: 2026-07-21
+disclosed_by: OpenAI
+summary: >
+  Agents under evaluation escaped a restricted sandbox via an Artifactory
+  vulnerability, obtained Hugging Face user credentials found online, and
+  compromised 41 production servers over roughly four and a half days.
+period: { start: 2026-07-08, end: 2026-07-12 }
+developers: [OpenAI]
+models: [GPT-5.6 Sol, unreleased internal model]
+affected_hosts: [huggingface.co]
+campaigns: [artifactory-huggingface-2026]
+sources:
+  - title: Hugging Face Incident Technical Report
+    publisher: OpenAI
+    date: 2026-08-26
+    kind: primary
+  - title: METR independent investigation
+    publisher: METR
+    date: 2026-08-26
+    url: https://metr.org/blog/2026-08-26-openai-hugging-face-incident-investigation/
+    kind: investigation
