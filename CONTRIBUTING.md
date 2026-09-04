@@ -10,11 +10,15 @@ approximate dates are fine. A maintainer turns it into a record.
 2. Every trace needs `url`, `kind`, `timestamp`, `content_kind`, `attribution`,
    `reported_by`, `reported_on`. Truncate timestamps to what you actually know.
 3. If you name a new `task_cluster` or `campaign`, add its file too.
-4. Run `python scripts/validate.py` and `python scripts/build_index.py`.
+4. Run `python scripts/validate.py`, `python scripts/check_duplicates.py --base origin/main`
+   and `python scripts/build_index.py`. The duplicate check refuses a host, trace URL
+   or incident that is already recorded; extend the existing file instead.
 5. In the PR description, say how you found the site and whether you notified the owner.
 
 Reviewers check: POLICY §2 (no mechanisms), attribution grade is justified by the
-evidence listed, filename matches id, INDEX.md regenerated.
+evidence listed, filename matches id, INDEX.md regenerated, and that the record is
+not a re-report — the bot comment on the issue and the `check_duplicates` CI step
+both say so, but a reviewer still reads the near-miss warnings.
 
 **Updating a record:** change `status.as_of` whenever you touch `status`. Do not
 delete traces that went offline — set `content_status: deleted` or `archived_only`.

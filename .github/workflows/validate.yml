@@ -7,10 +7,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with: { fetch-depth: 0 }   # check_duplicates --base needs the base branch
       - uses: actions/setup-python@v5
-        with: { python-version: "3.12" }
-      - run: pip install pyyaml jsonschema referencing
-      - run: python scripts/validate.py
+        with: { python-version-file: .python-version }
+      - run: pip install -r requirements.txt
+      - name: Records match their schemas
+        run: python scripts/validate.py
+      - name: Nothing duplicates an existing record
+        run: |
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
+            python scripts/check_duplicates.py --base "origin/${{ github.base_ref }}"
+          else
+            python scripts/check_duplicates.py
+          fi
       - name: INDEX.md is up to date
         run: |
           python scripts/build_index.py

@@ -17,7 +17,7 @@ campaigns/   agent populations acting together, with attribution and sources
 tasks/       what the agents were apparently trying to solve
 incidents/   formally disclosed events, linking hosts ↔ campaigns ↔ sources
 schema/      JSON Schema for each of the above
-scripts/     validate.py (CI gate) · build_index.py (regenerates INDEX.md)
+scripts/     validate.py · check_duplicates.py (CI gates) · build_index.py (regenerates INDEX.md)
 INDEX.md     generated summary table — do not edit by hand
 ```
 
@@ -46,10 +46,17 @@ accepted reports into `sites/*.yaml`. Direct PRs are welcome if
 and it is the part that matters.
 
 ```
-pip install pyyaml jsonschema referencing
-python scripts/validate.py          # must print OK
-python scripts/build_index.py       # refresh INDEX.md
+pip install -r requirements.txt                       # Python 3.12 (see .python-version)
+python scripts/validate.py                            # must print OK
+python scripts/check_duplicates.py --base origin/main # must print OK: nothing re-reports a known record
+python scripts/build_index.py                         # refresh INDEX.md
 ```
+
+Before merging, CI checks that nothing in the PR duplicates something already
+recorded: a host under a `www.`/case variant, a trace URL already listed, an
+incident already filed from the same disclosure. Issues opened with the
+**Report a site** form get the same check automatically and are labelled
+`possible-duplicate` when the host or a trace is already known.
 
 ## Scope
 

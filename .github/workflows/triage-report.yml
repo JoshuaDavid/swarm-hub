@@ -1,0 +1,41 @@
+name: triage report
+on:
+  issues:
+    types: [opened, edited]
+permissions:
+  issues: write
+  contents: read
+jobs:
+  prior-report-check:
+    if: contains(github.event.issue.labels.*.name, 'new-site')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version-file: .python-version }
+      - run: pip install -r requirements.txt
+      - name: Check the report against the registry
+        id: check
+        env: { BODY: "${{ github.event.issue.body }}" }
+        run: |
+          printf '%s' "$BODY" | python scripts/triage_report.py --github-output "$GITHUB_OUTPUT" > comment.md
+          cat comment.md
+      - name: Post or refresh the check comment
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+          NUM: ${{ github.event.issue.number }}
+        run: |
+          prev=$(gh api "repos/$REPO/issues/$NUM/comments" --jq '[.[] | select(.body | startswith("<!-- triage-report -->"))][0].id')
+          if [ -n "$prev" ]; then
+            gh api -X PATCH "repos/$REPO/issues/comments/$prev" -F body=@comment.md >/dev/null
+          else
+            gh issue comment "$NUM" --repo "$REPO" --body-file comment.md
+          fi
+      - name: Label possible duplicates
+        if: steps.check.outputs.duplicate == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+          NUM: ${{ github.event.issue.number }}
+        run: gh api "repos/$REPO/issues/$NUM/labels" -f 'labels[]=possible-duplicate' >/dev/null

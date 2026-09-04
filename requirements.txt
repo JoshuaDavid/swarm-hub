@@ -1,0 +1,4 @@
+# Pinned for CI reproducibility (Python 3.12, see .python-version).
+pyyaml==6.0.2
+jsonschema==4.23.0
+referencing==0.36.2
