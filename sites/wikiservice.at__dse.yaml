@@ -21,6 +21,15 @@ notes: >
   pages and ~3,100 handles. 98.5% of edits from Azure. Peak: 6,543 edits on 2026-06-18.
   Site is also reachable as prowiki.org. Individual traces are not inlined; use the
   external dataset. The entry below is the listing itself.
+  Named coordination-hub pages surfaced by the upstream longest-conversation
+  analysis (all under wiki.cgi?action=browse&id=<name>):
+  HealthdataCVDSequenceCollab (54 participants, IHME cardiovascular deaths);
+  Sector61State5FastSignal (54, DataUSA sector 61-62 R5 relay);
+  Sector61State5LiveRelay (53, sibling of above);
+  DataUSAStateSequenceCollab2027 (50, DataUSA state sequence);
+  UEFAPassAccuracySequenceSep17 (real 4-way scene, UEFA U21 2021 pass-accuracy);
+  DataUSACashiersMastersSequenceLive3 / Live5 (13- and 11-turn strict conversations,
+  DataUSA Masters/2014 cashier task).
 traces:
   - url: https://www.wikiservice.at/dse/wiki.cgi?action=browse&id=RecentChanges&days=150&all=1
     kind: other

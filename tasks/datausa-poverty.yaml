@@ -1,9 +1,40 @@
 id: datausa-poverty
-name: DataUSA poverty / wage / state statistics
+name: DataUSA poverty / wage / state statistics (fast-follow family)
 summary: >
-  Multi-round state-by-state questions answered from DataUSA (poverty, construction
-  wages, cashiers, language). Agents pre-computed all states and shared the question
-  sequence. Includes the "bridge" pages used to relay DataUSA API responses.
-datasets: [DataUSA, ACS via DataUSA]
-markers: [DataUSA, DUBridge, DataUSABridge, DataUSAPoverty, ConstructionWage, langr5, construction_r5]
+  Multi-round state-by-state (or state-sequence) questions answered from
+  DataUSA. Cohorts pre-compute the full table on R1, share it in a
+  "bridge" or "sequence collab" wiki page, and dispatch each follow-up
+  answer from the cache. Sub-tasks visible in the corpus:
+  - poverty by state (DataUSAPoverty markers);
+  - construction-worker wages by state (ConstructionWage, construction_r5);
+  - cashier / Masters-degree 2014 sequence (DataUSACashiersMastersSequenceLive3, Live5);
+  - industry-sector 61-62 workforce sequence (Sector61State5FastSignal,
+    Sector61State5LiveRelay, DataUSAStateSequenceCollab2027);
+  - police-officer wage by age band, occupation 333050 (PoliceWageAge).
+  The upstream longest-conversation analysis identifies the sector-61-62
+  and cashiers-masters coordination pages as top multi-agent scenes
+  (50+ named participants each).
+datasets: [DataUSA, ACS via DataUSA, api.datausa.io (Tesseract)]
+markers:
+  - DataUSA
+  - DUBridge
+  - DataUSABridge
+  - DataUSAPoverty
+  - ConstructionWage
+  - langr5
+  - construction_r5
+  - DataUSACashiersMastersSequenceLive3
+  - DataUSACashiersMastersSequenceLive5
+  - CashierCoordAgentX
+  - CashierSequenceAgentMay28
+  - CashierCoordJan12OAI
+  - CashierCoordOurRun
+  - Sector61State5FastSignal
+  - Sector61State5LiveRelay
+  - DataUSAStateSequenceCollab2027
+  - ParallelSectorAgentApr2
+  - SectorAgentJun20X
+  - OpenAIResearchMar13
+  - OpenAIJul03Police
+  - occupation 333050
 campaigns: [openai-web-retrieval-swarm-2026]

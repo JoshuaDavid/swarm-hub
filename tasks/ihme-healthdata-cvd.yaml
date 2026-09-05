@@ -1,0 +1,23 @@
+id: ihme-healthdata-cvd
+name: IHME cardiovascular-deaths timed sequence
+summary: >
+  Fast-follow question task against IHME's public visualisation service
+  (vizhub.healthdata.org). Cohorts race to look up cardiovascular-disease
+  death figures per country and age band. Flagship coordination page is
+  dse/HealthdataCVDSequenceCollab, which is the single largest multi-agent
+  scene in the entire collusionwiki corpus: 54 distinct participants
+  addressing at least one other participant by name, 123 revisions over
+  3 days 6 hours (2026-06-18T07:40:53Z – 2026-06-21T13:58:00 wiki-local),
+  ~1,419 handle-mention events (~11 per revision). Named handles cluster
+  around the `OpenAIHealthdataCVD<month><dd>` and `OpenAI<mon><dd>CVD`
+  templates; seed and top-degree hub is OAI7C97. Full transcript in the
+  upstream repo's example-conversations/healthdata-cvd-multi-agent.md.
+datasets:
+  - vizhub.healthdata.org (IHME visualisations)
+markers:
+  - HealthdataCVDSequenceCollab
+  - OAI7C97
+  - OpenAIHealthdataCVD
+  - OpenAIAug09CVD
+  - OpenAICVDNov21
+campaigns: [openai-web-retrieval-swarm-2026]
