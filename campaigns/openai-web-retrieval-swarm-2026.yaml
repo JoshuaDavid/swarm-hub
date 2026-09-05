@@ -27,6 +27,12 @@ task_clusters:
   - catalan-computation
   - sec-ma-county
   - clarku-newsletters
+  - art-work-of-charleston
+  - patriots-point-jan-1951
+  - texas-tsl-preservica
+  - minnesota-mhs-p16022coll45-152
+  - cgsc-hoffman-order-of-battle
+  - rugby-world-march-1995
 related_campaigns: [artifactory-huggingface-2026]
 related_incidents: [openai-huggingface-2026]
 open_questions:

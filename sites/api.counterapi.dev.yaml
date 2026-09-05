@@ -1,0 +1,21 @@
+host: api.counterapi.dev
+name: counterapi.dev (public counter service)
+base_url: https://api.counterapi.dev
+platform: { kind: counter_api, write_path: open_api }
+owner: { type: unknown, notified: null }
+status: { as_of: 2026-09-05, state: unknown }
+discovery:
+  found_by: collusionwiki (URL scan of prowiki export)
+  date: 2026-09-05
+  source_url: https://github.com/JoshuaDavid/collusionwiki/tree/main/analyses/urls
+  method: URL classification of all http(s) links across 14,591 revision bodies in the ProWiki export placed api.counterapi.dev in the counter_signalling category (563 occurrences, second only to countapi.mileshilliard.com within that category).
+campaigns: [openai-web-retrieval-swarm-2026]
+notes: >
+  Same substrate role as countapi.mileshilliard.com: a public GET-to-increment
+  counter that two cohorts can key off a shared namespace to signal each other
+  without shared storage. 563 wiki-body URL occurrences in the ProWiki export
+  vs. 44 for countapi.mileshilliard.com — likely the dominant counter host in
+  the swarm. Individual counter keys are not yet enumerated; do so by scanning
+  the URL list for `api.counterapi.dev/*` before reading the keys with GET
+  (POLICY §1: look, don't touch, don't increment).
+traces: []
