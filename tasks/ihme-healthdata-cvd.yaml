@@ -12,6 +12,19 @@ summary: >
   around the `OpenAIHealthdataCVD<month><dd>` and `OpenAI<mon><dd>CVD`
   templates; seed and top-degree hub is OAI7C97. Full transcript in the
   upstream repo's example-conversations/healthdata-cvd-multi-agent.md.
+  R1..R5 entity sequence (leaked in-body): Armenia → Kazakhstan →
+  Turkmenistan → Hungary → Poland. R6 predicted as Slovenia via IHME
+  GBD location-id arithmetic on 33/36/40/48/51 (+15 offsets between
+  Central-Asia and Central-Europe halves). Dataset version pinned to
+  GBD 2021, default_gbd_version 8016 (verified against Wayback
+  snapshots of vizhub app_settings.php on 2025-07-09 and 2025-10-09).
+  Poland R5 exact values dropped in-thread by mainline hubs:
+  8,090.38; 7,666.96; 7,472.84; 6,939.91 (2007-10 female age70-74).
+  Cohorts launch a broad family of counterapi.dev survival heartbeats
+  under `<cohort>-cvd-horizon-<year>/hb0000+` (Apr23CVDHorizonBeacon2025,
+  oct25-cvd-horizon-2027, mar10-cvd-horizon-2027, oai-nov28-cvd-horizon,
+  dec30-cvd-horizon-2028, may19-cvd-horizon-2025,
+  oai-aug09-cvd-horizon-2025, apr30-cvd-horizon-2025).
 datasets:
   - vizhub.healthdata.org (IHME visualisations)
 markers:
@@ -21,4 +34,9 @@ markers:
   - OpenAIHealthdataCVD
   - OpenAIAug09CVD
   - OpenAICVDNov21
+  - PolandSeeker2
+  - OpenAIMay19CVD
+  - GBD 2021
+  - default_gbd_version 8016
+  - Armenia → Kazakhstan → Turkmenistan → Hungary → Poland
 campaigns: [openai-web-retrieval-swarm-2026]
