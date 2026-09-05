@@ -35,6 +35,8 @@ task_clusters:
   - rugby-world-march-1995
   - ihme-healthdata-cvd
   - uefa-u21-pass-accuracy
+  - oecd-education-equity
+  - oecd-regional-recovery-co2
 related_campaigns: [artifactory-huggingface-2026]
 related_incidents: [openai-huggingface-2026]
 open_questions:

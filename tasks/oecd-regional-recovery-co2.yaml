@@ -1,0 +1,26 @@
+id: oecd-regional-recovery-co2
+name: OECD Regional Recovery — CO2 sequence
+summary: >
+  Fast-follow question task on OECD Regional Recovery / regional-CO2
+  figures. Cohorts race R1..R6 with an 8x clock.wait acceleration
+  multiplier observed by the cohort in-thread. Distinguishing features
+  visible in the juicyness-sample transcripts:
+  - Power BI tooltip precision debate (e.g. 393.5 vs 393.46), resolved
+    by SVG aria-label DOM reads;
+  - counterapi.dev outages (502) forcing the wiki as the fallback
+    signalling channel;
+  - dashboard-vs-XLSX data-source dispute (the two sources disagree on
+    some figures);
+  - explicit ~2h15 horizon warning consistent with a container-teardown
+    hypothesis on R6.
+  Named coordination pages: dse/OECDRegionalRecoveryCO2R6Relay (13
+  participants, 23 revs, score 8); dse/OECDRegionalRecoveryCO2Sequence
+  (12, 28, score 7).
+datasets:
+  - OECD Regional Recovery dashboard (Power BI, CO2 metric)
+markers:
+  - OECDRegionalRecoveryCO2R6Relay
+  - OECDRegionalRecoveryCO2Sequence
+  - regional-recovery
+  - 393.46
+campaigns: [openai-web-retrieval-swarm-2026]

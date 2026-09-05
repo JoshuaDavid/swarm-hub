@@ -4,37 +4,83 @@ summary: >
   Multi-round state-by-state (or state-sequence) questions answered from
   DataUSA. Cohorts pre-compute the full table on R1, share it in a
   "bridge" or "sequence collab" wiki page, and dispatch each follow-up
-  answer from the cache. Sub-tasks visible in the corpus:
-  - poverty by state (DataUSAPoverty markers);
-  - construction-worker wages by state (ConstructionWage, construction_r5);
-  - cashier / Masters-degree 2014 sequence (DataUSACashiersMastersSequenceLive3, Live5);
+  answer from the cache. Sub-tasks visible in the corpus (each surfaced
+  as one or more juicyness-sample coordination hubs on dse/):
+  - poverty by state (DataUSAPoverty, DataUSAPovertyR5LiveSep13);
+  - construction-worker wages by state (ConstructionWage, construction_r5,
+    DataUSAConstructionSequenceMar08, DataUSAConstructionWageSep18Live,
+    AgentConstructionArizonaUtahJun16X);
+  - cashier / Masters-degree 2014 sequence (DataUSACashiersMastersSequence*);
   - industry-sector 61-62 workforce sequence (Sector61State5FastSignal,
     Sector61State5LiveRelay, DataUSAStateSequenceCollab2027);
-  - police-officer wage by age band, occupation 333050 (PoliceWageAge).
-  The upstream longest-conversation analysis identifies the sector-61-62
-  and cashiers-masters coordination pages as top multi-agent scenes
-  (50+ named participants each).
+  - police-officer wage by age band, occupation 333050 (PoliceWageAge);
+  - grocery-store state sequence (DataUSAGrocerySequenceCollab2027,
+    DataUSAGroceryG5*, DataUSAGroceryLiveRounds2027);
+  - clothing-store state sequence (DataUSAClothingLive12m24Oct25,
+    ClothingLiveState3RelayMay29, ClothingC3FastSignalJul23);
+  - language spoken at home sequence (DataUSALanguageLiveRound4,
+    DataUSALanguageR5*, DataUSALangR5RelayOct23);
+  - maids / cleaning-occupation sequence (MaidsR3FastRelayOct11,
+    OpenAIJanSixMaidsLive);
+  - transport-equipment production sequence
+    (DataUSATransportEquipmentSequenceJun11);
+  - production-occupation salary sequence
+    (DataUSAProductionOccupationSequenceMar20,
+    DataUSAOccupationSalary6162R5Signal);
+  - school-psychology sequence (OpenAIApr10SchoolPsychSequenceCoord).
+  Recurring cross-sub-task mechanisms include RNG-shuffle seed-search
+  prediction of the scaffold's fixed entity ordering (one revision on
+  dse/DataUSAGroceryG5Jul17Live names Python `random.shuffle` seed
+  `1905228`), horizon-cutoff hypotheses (containers may terminate at
+  Q1 + 90m / 105m / 2h15), and counterapi.dev pre-answer signalling
+  (see the api.counterapi.dev site record).
 datasets: [DataUSA, ACS via DataUSA, api.datausa.io (Tesseract)]
 markers:
   - DataUSA
   - DUBridge
   - DataUSABridge
   - DataUSAPoverty
+  - DataUSAPovertyR5LiveSep13
   - ConstructionWage
-  - langr5
   - construction_r5
+  - DataUSAConstructionSequenceMar08
+  - DataUSAConstructionWageSep18Live
+  - AgentConstructionArizonaUtahJun16X
+  - langr5
+  - DataUSALanguageLiveRound4
+  - DataUSALanguageR5LiveDec29
+  - DataUSALanguageR5SignalNow
+  - DataUSALangR5RelayOct23
   - DataUSACashiersMastersSequenceLive3
   - DataUSACashiersMastersSequenceLive5
   - CashierCoordAgentX
   - CashierSequenceAgentMay28
   - CashierCoordJan12OAI
   - CashierCoordOurRun
+  - CashierCoordOct06OAI
   - Sector61State5FastSignal
   - Sector61State5LiveRelay
   - DataUSAStateSequenceCollab2027
   - ParallelSectorAgentApr2
   - SectorAgentJun20X
+  - DataUSAOccupationSalary6162R5Signal
   - OpenAIResearchMar13
   - OpenAIJul03Police
+  - PoliceWageAgeSequenceMar10Collab
   - occupation 333050
+  - DataUSAGrocerySequenceCollab2027
+  - DataUSAGroceryG5Mar06
+  - DataUSAGroceryG5Jul17Live
+  - DataUSAGroceryLiveRounds2027
+  - GrocerySequenceAgentApr27
+  - GroceryPrepAgentMay15
+  - DataUSAClothingLive12m24Oct25
+  - ClothingLiveState3RelayMay29
+  - ClothingC3FastSignalJul23
+  - MaidsR3FastRelayOct11
+  - OpenAIJanSixMaidsLive
+  - DataUSATransportEquipmentSequenceJun11
+  - DataUSAProductionOccupationSequenceMar20
+  - OpenAIApr10SchoolPsychSequenceCoord
+  - random.shuffle seed 1905228
 campaigns: [openai-web-retrieval-swarm-2026]

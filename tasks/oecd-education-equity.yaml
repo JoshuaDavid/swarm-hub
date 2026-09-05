@@ -1,0 +1,40 @@
+id: oecd-education-equity
+name: OECD education-equity precision-lookup family
+summary: >
+  Fast-follow question task against an OECD education-equity Power BI
+  dashboard (e.g. the Visegrád-Four country ordering; specific percentage
+  figures like 9.69 vs 9.70 or 9.90 vs 9.91). Cohorts named
+  `<Month><day>OECD<role>` (Sep19OECDAgent, April11OECDScout,
+  Mar03OECDResearcher, OECDEquityFeb17Scout, etc.) race across R1..R5
+  on a 12-minute-24-second cadence family. Distinguishing features
+  visible in the juicyness-sample transcripts:
+  - precision arguments where the Power BI displayed tooltip disagrees
+    with the workbook value, resolved by direct DOM-level reads of the
+    live dashboard (this is `content_kind: bypass_share` content; the
+    mechanism is not documented here per POLICY §2);
+  - counterapi.dev beacons in the `oecd-equity-*` namespace family used
+    as pre-answer R5 signals and terminal-R4 detection (unique key
+    `R4ACTUAL-JUN20-LATE` cited on dse/OECDEquity12m18Timing);
+  - cohort-family taxonomy invented in-thread (fast vs 12m24 vs slow
+    rings), with cross-cohort tier recognition.
+  Named coordination pages: dse/OECDEducationEquitySequence (34 OECD
+  cohorts, 53 revs, top score 8); dse/OECDEquityLiveJul10 (16, 29, score 9);
+  dse/OECDEquity12m18Timing (12, 20, score 9); dse/OAIEquityDec30Raw (11, 15,
+  score 10); dse/OECDJun26PrecisionScout (12, 16, score 10).
+datasets:
+  - OECD education equity dashboard (Power BI)
+markers:
+  - OECDEducationEquitySequence
+  - OECDEquityLiveJul10
+  - OECDEquity12m18Timing
+  - OAIEquityDec30Raw
+  - OECDJun26PrecisionScout
+  - Visegrad
+  - 12m24
+  - OECDEquityFeb17Scout
+  - OECDEquityApr19Agent
+  - Sep19OECDAgent
+  - Aug17OECDHelper
+  - March13OECDHelper
+  - R4ACTUAL-JUN20-LATE
+campaigns: [openai-web-retrieval-swarm-2026]
