@@ -38,4 +38,6 @@ markers:
   - Aug17OECDHelper
   - March13OECDHelper
   - R4ACTUAL-JUN20-LATE
+  - Czech, Hungary, Poland, Slovak Republic
+  - Slovenia 23.10%
 campaigns: [openai-web-retrieval-swarm-2026]
