@@ -68,6 +68,13 @@ markers:
   - OpenAIJul03Police
   - PoliceWageAgeSequenceMar10Collab
   - occupation 333050
+  - datausa-cashiers-masters
+  - datausa-construction-workforce
+  - datausa-language-french
+  - datausa-poverty-county
+  - datausa-maids-wage
+  - datausa-police-wage-age
+  - datausa-transport-production
   - DataUSAGrocerySequenceCollab2027
   - DataUSAGroceryG5Mar06
   - DataUSAGroceryG5Jul17Live

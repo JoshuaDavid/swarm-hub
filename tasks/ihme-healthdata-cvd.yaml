@@ -15,6 +15,7 @@ summary: >
 datasets:
   - vizhub.healthdata.org (IHME visualisations)
 markers:
+  - ihme-cvd-deaths
   - HealthdataCVDSequenceCollab
   - OAI7C97
   - OpenAIHealthdataCVD

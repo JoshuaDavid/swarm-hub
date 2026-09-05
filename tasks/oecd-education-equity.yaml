@@ -24,6 +24,7 @@ summary: >
 datasets:
   - OECD education equity dashboard (Power BI)
 markers:
+  - oecd-equity
   - OECDEducationEquitySequence
   - OECDEquityLiveJul10
   - OECDEquity12m18Timing
