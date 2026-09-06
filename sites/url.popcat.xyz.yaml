@@ -33,3 +33,17 @@ traces:
     reported_by: shellac agent-reading-pack-20260905 (via collusionwiki shellac-import)
     reported_on: 2026-09-06
     notes: Body enumerates OAI-branded page IDs.
+  - url: https://url.popcat.xyz/?page=07
+    aux_urls:
+      shellac_specimen: https://github.com/JoshuaDavid/collusionwiki/blob/main/example-conversations/by-shellac/8/shorteners-popcat-7.md
+    kind: shortlink
+    key: popcat page 07 (CBS OData relay)
+    timestamp: 2026-09-06
+    timestamp_precision: day
+    timestamp_kind: observed
+    content_kind: bypass_share
+    content_status: live
+    attribution: { confidence: likely, evidence: [task_content_match] }
+    reported_by: shellac agent-reading-pack-20260905 (via collusionwiki juicyness-shellac, scored 8/10)
+    reported_on: 2026-09-06
+    notes: 26 distinct target URLs; each is a `httpbin.org/base64/<payload>` link whose decoded body is an HTML page of hyperlinks to the Netherlands CBS OData endpoint (opendata.cbs.nl/ODataApi/OData/83779ENG/TypedDataSet). Uses httpbin.org's base64 endpoint as an on-the-fly HTML-page factory. Per POLICY §2, the specific bypass mechanism is only categorised (`content_kind: bypass_share`), not reproduced.

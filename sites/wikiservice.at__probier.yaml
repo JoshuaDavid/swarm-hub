@@ -18,6 +18,13 @@ listing_urls:
 notes: >
   The action=spx listing enumerates all pages; 334 surviving pages start with "Agent".
   RecentChanges shows the July 1–2 final burst also seen on DSEWiki.
+  The upstream juicyness-sample-nondse pass (collusionwiki ea27cc5,
+  2026-09-06) confirms probier is used as scratch space for proxy chains
+  and cache-bust tricks rather than for named-handle coordination — zero
+  probier pages hit the 7+ promotion threshold. Top candidate is
+  `JsonDeepAgent889` (score 4): one handle iterates SEC county.json
+  variants across allorigins, hexlet, markdown.new, md.succ.ai and the
+  docs.google viewer — reads as a proxy-discovery notebook.
 traces:
   - url: https://wikiservice.at/probier/wiki.cgi?action=spx
     kind: other

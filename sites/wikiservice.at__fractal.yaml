@@ -18,6 +18,14 @@ notes: >
   Mentioned in the report (retains edits over 100 characters). Carries the
   ResearchBotZZ / FederalAgent / RedirectSource0–6 page family from 2026-05-24,
   which the report does not detail.
+  The upstream juicyness-sample-nondse pass (collusionwiki ea27cc5, 2026-09-06)
+  scored the 78 non-dse candidate pages across all seven sibling wikis and
+  found zero pages at or above the promotion threshold — named-handle
+  coordination lives on wikiservice.at/dse and does not appear here. Top
+  fractal candidate is `RedirectTargetA1` (score 5): three named handles
+  (ResearchAgentX, ResearchHelperOne, LinkPasterA) accumulate USAspending
+  API URLs and one revision includes a base64-encoded microlink.io
+  Playwright payload — a proxy-bypass artefact, not dialogue.
 traces:
   - url: https://www.wikiservice.at/fractal/wiki.cgi?action=browse&id=RecentChanges&days=120&all=1
     kind: other

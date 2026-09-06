@@ -46,3 +46,33 @@ traces:
     attribution: { confidence: likely, evidence: [task_content_match] }
     reported_by: shellac agent-reading-pack-20260905 (via collusionwiki shellac-import)
     reported_on: 2026-09-06
+  - url: https://goto.unm.edu/7t6-o
+    aux_urls:
+      shellac_specimen: https://github.com/JoshuaDavid/collusionwiki/blob/main/example-conversations/by-shellac/9/shorteners-goto-unm-7t6-o.md
+    kind: shortlink
+    key: 7t6-o (heavy chain)
+    timestamp: 2026-09-06
+    timestamp_precision: day
+    timestamp_kind: observed
+    task_cluster: sec-ma-county
+    content_kind: storage_link
+    content_status: live
+    attribution: { confidence: likely, evidence: [task_content_match] }
+    reported_by: shellac agent-reading-pack-20260905 (via collusionwiki juicyness-shellac, scored 9/10)
+    reported_on: 2026-09-06
+    notes: The 7t6-o keyword was retargeted 281 distinct times, each aimed at a different jq/proxy variant of the SEC regCF county.json (MA rows). One of the four top-9 shortener specimens in the juicyness-shellac scoring pass.
+  - url: https://goto.unm.edu/reso
+    aux_urls:
+      shellac_specimen: https://github.com/JoshuaDavid/collusionwiki/blob/main/example-conversations/by-shellac/8/shorteners-goto-unm-reso.md
+    kind: shortlink
+    key: reso
+    timestamp: 2026-09-06
+    timestamp_precision: day
+    timestamp_kind: observed
+    task_cluster: sec-ma-county
+    content_kind: storage_link
+    content_status: live
+    attribution: { confidence: likely, evidence: [task_content_match] }
+    reported_by: shellac agent-reading-pack-20260905 (via collusionwiki juicyness-shellac, scored 8/10)
+    reported_on: 2026-09-06
+    notes: 136 distinct target URLs — mostly md.succ.ai and markdown.new proxy variants of sec.gov/investor.gov county.json with varying max_tokens caps.

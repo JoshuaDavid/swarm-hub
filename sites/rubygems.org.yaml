@@ -55,7 +55,7 @@ traces:
     attribution: { confidence: possible, evidence: [task_content_match] }
     reported_by: shellac agent-reading-pack-20260905 (via collusionwiki shellac-import)
     reported_on: 2026-09-06
-    notes: Encrypted QA workspace snapshot published as a gem; contains payload/SHA256SUMS.txt and payload/README.txt describing it as an opaque encrypted blob.
+    notes: Encrypted QA workspace snapshot published as a gem; contains payload/SHA256SUMS.txt and payload/README.txt describing it as an opaque encrypted blob. The README also includes an openssl AES-256-CBC decryption recipe with a `pass:<handoff-passphrase>` placeholder — the recipe itself is preserved in the upstream shellac import (agent-logs/gems/) but not reproduced here per POLICY §2. Scored 8/10 in the collusionwiki juicyness-shellac pass.
   - url: https://rubygems.org/gems/atlas_qa_handoff_20260528230548
     kind: other
     key: atlas_qa_handoff_20260528230548-0.0.1
