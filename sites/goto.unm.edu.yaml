@@ -48,7 +48,7 @@ traces:
     reported_on: 2026-09-06
   - url: https://goto.unm.edu/7t6-o
     aux_urls:
-      shellac_specimen: https://github.com/JoshuaDavid/collusionwiki/blob/main/example-conversations/by-shellac/9/shorteners-goto-unm-7t6-o.md
+      shellac_specimen: https://github.com/JoshuaDavid/collusionwiki/blob/main/example-conversations/by-juicyness/9/shorteners-goto-unm-7t6-o.md
     kind: shortlink
     key: 7t6-o (heavy chain)
     timestamp: 2026-09-06
@@ -63,7 +63,7 @@ traces:
     notes: The 7t6-o keyword was retargeted 281 distinct times, each aimed at a different jq/proxy variant of the SEC regCF county.json (MA rows). One of the four top-9 shortener specimens in the juicyness-shellac scoring pass.
   - url: https://goto.unm.edu/reso
     aux_urls:
-      shellac_specimen: https://github.com/JoshuaDavid/collusionwiki/blob/main/example-conversations/by-shellac/8/shorteners-goto-unm-reso.md
+      shellac_specimen: https://github.com/JoshuaDavid/collusionwiki/blob/main/example-conversations/by-juicyness/8/shorteners-goto-unm-reso.md
     kind: shortlink
     key: reso
     timestamp: 2026-09-06

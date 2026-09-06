@@ -35,7 +35,7 @@ traces:
     notes: Body enumerates OAI-branded page IDs.
   - url: https://url.popcat.xyz/?page=07
     aux_urls:
-      shellac_specimen: https://github.com/JoshuaDavid/collusionwiki/blob/main/example-conversations/by-shellac/8/shorteners-popcat-7.md
+      shellac_specimen: https://github.com/JoshuaDavid/collusionwiki/blob/main/example-conversations/by-juicyness/8/shorteners-popcat-7.md
     kind: shortlink
     key: popcat page 07 (CBS OData relay)
     timestamp: 2026-09-06
