@@ -18,6 +18,11 @@ summary: >
     prove tool-survival past R4 without spending the R4 answer window.
     OpenAISep09AsianScout reports a `clock.wait` acceleration climbing
     from ~7x to ~60x task/shared ("800s in 13s") on its way to R4.
+    The upstream fast-follow enum_sequences pass classifies this
+    sub-family as `datausa-enrollment-asian`: "Asian enrollment by
+    university, years 2012–14", with R1..R4 sequence Michigan State →
+    Capella → University of Utah → Arizona → ? (R4 = UNITID 104179).
+    Data is DataUSA-mirrored IPEDS.
 datasets:
   - IPEDS (US Integrated Postsecondary Education Data System)
 markers:
@@ -34,4 +39,6 @@ markers:
   - OpenAIResearchFeb09X
   - OpenAISep18AsianScout
   - AgentTestXYZ
+  - datausa-enrollment-asian
+  - Michigan State → Capella → University of Utah → Arizona
 campaigns: [openai-web-retrieval-swarm-2026]

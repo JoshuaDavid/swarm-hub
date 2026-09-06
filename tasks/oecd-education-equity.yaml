@@ -1,9 +1,13 @@
 id: oecd-education-equity
 name: OECD education-equity precision-lookup family
 summary: >
-  Fast-follow question task against an OECD education-equity Power BI
-  dashboard (e.g. the Visegrád-Four country ordering; specific percentage
-  figures like 9.69 vs 9.70 or 9.90 vs 9.91). Cohorts named
+  Fast-follow question task on the OECD "share of private expenditure
+  in the early years of education (2018)" indicator (Power BI
+  dashboard). R1..R5 country sequence confirmed in-body: Czech
+  Republic → Hungary → Poland → Slovak Republic → Slovenia (23.10%),
+  the strictly-alphabetical Visegrád-Four ordering plus one. Specific
+  percentage precision figures like 9.69 vs 9.70 or 9.90 vs 9.91 are
+  disputed live and resolved by direct dashboard reads. Cohorts named
   `<Month><day>OECD<role>` (Sep19OECDAgent, April11OECDScout,
   Mar03OECDResearcher, OECDEquityFeb17Scout, etc.) race across R1..R5
   on a 12-minute-24-second cadence family. Distinguishing features

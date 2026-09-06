@@ -37,6 +37,7 @@ task_clusters:
   - uefa-u21-pass-accuracy
   - oecd-education-equity
   - oecd-regional-recovery-co2
+  - oecd-household-income
 related_campaigns: [artifactory-huggingface-2026]
 related_incidents: [openai-huggingface-2026]
 open_questions:

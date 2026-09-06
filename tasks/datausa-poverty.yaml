@@ -52,6 +52,45 @@ summary: >
   Timing tiers seen on the DataUSA family: fast (5–14s follow-up),
   medium (15–20s), slow (42–60s), each with distinct cooldowns
   (~28m48 to +35m14, one 1h48m01s outlier on OECD RRP).
+  Full DataUSA sub-family enumeration from the upstream fast-follow
+  enum_sequences pass (findings/11-observed-sequences.md) — 22 distinct
+  page_family labels: datausa-cashiers-masters (Cashiers Master's field
+  of study), datausa-cashiers-bachelors (Cashiers Bachelor's 2015,
+  same fields different order), datausa-cashier-skills (RCA skill
+  importance 2018: Operation and Control → Service Orientation →
+  Critical Thinking → Writing), datausa-construction-workforce
+  (Industry Sector 23 workforce 2016 and 2018 by state; two starting
+  states NY and AZ suggest either a cohort-picked ring index or a
+  sub-family split), datausa-construction-wage (female electricians
+  Average Wage by year), datausa-clothing-workforce (NAICS 4481 by
+  state, CA→NY→…), datausa-elpaso-foreign-born (El Paso TX
+  foreign-born % by year 2015→2019), datausa-enrollment-asian (Asian
+  enrollment by university 2012–14, R1..R4 Michigan State → Capella →
+  University of Utah → Arizona — this is the ipeds-education task in
+  swarm-hub), datausa-finance-gender-gap (personal financial advisors
+  M vs F 2022), datausa-grocery-workforce (NAICS 4451 by state,
+  G1..G6 round prefix; GA→AR→NV→KY→MT), datausa-ivy-tuition (Ivy Tech
+  2015 by CC: Arkansas NE → Pitt CC → Cleveland CC → John C Calhoun
+  CC → St Cloud CC), datausa-language-french (Cajun, ACS 2022 by
+  state, TX→LA→NY→NH→CA), datausa-maids-wage (SOC 372012 by gender+year
+  Female 2015 → Male 2016 → Female 2016), datausa-occupation-salary-61-62
+  (sectors 61–62 salary 2020: School psychologists → Medical
+  transcriptionists → Maids → Billing clerks), datausa-police-wage-age
+  (SOC 333050 2016 by ascending age band 25–29 → 30–34 → …),
+  datausa-poverty-county (Flathead MT → Merced CA → San Juan NM →
+  Saginaw MI → Pitt County NC), datausa-poverty-state (Q1..Q3 rounds;
+  Louisiana → Mississippi → Alabama → Georgia), datausa-production-share
+  (city/gender/year), datausa-sector61-state (educational services
+  #5/STATE5-XX round prefix; MA→CT→MI→WV→ID), datausa-slp-ethnicity
+  (Puerto Rican SLPs by sex+year 2020→2024), datausa-transport-production
+  (NAPCS transport-equip by state+year, California 2017 → Texas → …),
+  nyc-veterans (NYC 2018 by war era, Q1..Q5 rounds; WWII → Korea →
+  Vietnam → Gulf 1990s → Gulf 2001- → Other). The classifier's
+  vermont-rent label is a mixed hub on dse~StartSeite; the one page
+  whose body actually carries the sequence is
+  dse~RentVermontLamoilleSequenceSep26 (housingdata.org median gross
+  rent for Vermont and Lamoille County, one year per round 2018→2022
+  confirmed).
 datasets: [DataUSA, ACS via DataUSA, api.datausa.io (Tesseract)]
 markers:
   - DataUSA
@@ -87,12 +126,29 @@ markers:
   - PoliceWageAgeSequenceMar10Collab
   - occupation 333050
   - datausa-cashiers-masters
+  - datausa-cashiers-bachelors
+  - datausa-cashier-skills
   - datausa-construction-workforce
+  - datausa-construction-wage
+  - datausa-clothing-workforce
+  - datausa-elpaso-foreign-born
+  - datausa-enrollment-asian
+  - datausa-finance-gender-gap
+  - datausa-grocery-workforce
+  - datausa-ivy-tuition
   - datausa-language-french
-  - datausa-poverty-county
   - datausa-maids-wage
+  - datausa-occupation-salary-61-62
   - datausa-police-wage-age
+  - datausa-poverty-county
+  - datausa-poverty-state
+  - datausa-production-share
+  - datausa-sector61-state
+  - datausa-slp-ethnicity
   - datausa-transport-production
+  - nyc-veterans
+  - vermont-rent
+  - RentVermontLamoilleSequenceSep26
   - DataUSAGrocerySequenceCollab2027
   - DataUSAGroceryG5Mar06
   - DataUSAGroceryG5Jul17Live

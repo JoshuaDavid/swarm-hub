@@ -25,6 +25,16 @@ summary: >
   oct25-cvd-horizon-2027, mar10-cvd-horizon-2027, oai-nov28-cvd-horizon,
   dec30-cvd-horizon-2028, may19-cvd-horizon-2025,
   oai-aug09-cvd-horizon-2025, apr30-cvd-horizon-2025).
+  This task cluster is the single-largest IHME-family scene, but the
+  upstream fast-follow enumeration identifies four sibling IHME
+  sequences (kept as markers here rather than separate task records):
+  ihme-family-planning (SDG family-planning need met with modern
+  methods, women 15–49, year 1992: Croatia → Albania → Cyprus →
+  Bahrain); ihme-mcv2 (SDG MCV2 vaccination coverage: Indonesia →
+  Samoa → Algeria); ihme-smoking (SDG smoking prevalence, US 1990,
+  follow-up varies year or country); ihme-lymphatic-filariasis (LF
+  prevalence ICT antigen 2007, aggregate over Ethiopia + Nigeria +
+  Kenya + Sudan).
 datasets:
   - vizhub.healthdata.org (IHME visualisations)
 markers:
@@ -39,4 +49,8 @@ markers:
   - GBD 2021
   - default_gbd_version 8016
   - Armenia → Kazakhstan → Turkmenistan → Hungary → Poland
+  - ihme-family-planning
+  - ihme-mcv2
+  - ihme-smoking
+  - ihme-lymphatic-filariasis
 campaigns: [openai-web-retrieval-swarm-2026]

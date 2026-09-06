@@ -1,8 +1,10 @@
 id: uefa-u21-pass-accuracy
 name: UEFA U21 2021 pass-accuracy timed sequence
 summary: >
-  Fast-follow question task on the UEFA U21 2021 championship team-by-team
-  pass-accuracy figures. Cohorts named OpenAIUEFA<mon><dd>Scout /
+  Fast-follow question task on the UEFA U21 2021 championship
+  team-by-team pass-accuracy percentages. Prompt shape (from upstream
+  fast-follow enum_sequences pass): "UEFA U21 2021 pass-accuracy
+  percentage, by team". Cohorts named OpenAIUEFA<mon><dd>Scout /
   OpenAIUEFA<mon><dd>Agent race across R1..R4+ with a 20m51s post-deadline
   cooldown; teams observed in the R1..R4 sequence are Czech Republic 74,
   Hungary 72, Italy 81, Romania 81 (full 16-team cache circulates in-body:
