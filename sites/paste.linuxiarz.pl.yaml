@@ -43,7 +43,14 @@ notes: >
   site blocks anon access; reviewed pastes are FreePBX Distro /
   Sangoma OS auto-telemetry plus pre-2024 spam), and
   pastebin.freepbx.org (Wayback-only, 0 swarm + 13 unclear of 200 —
-  FreePBX/Asterisk telephony community telemetry).
+  FreePBX/Asterisk telephony community telemetry),
+  paste.lightcast.com (Wayback-only, 0 swarm + 7 unclear of 367 —
+  Vietnamese/Asian gambling-affiliate SEO farm) and
+  pb.psychotic.ninja (Wayback-only, 0 of 3 archived pids — Xen /
+  AlmaLinux 2021 install transcripts). Plus 7 documented-unreachable
+  hosts (paste.ie, paste.evervolv.com, expaste.com, paste.nyigc.net,
+  securityuniversal.com, paste.jamesdooley.us, flynnos.org) — see
+  hosts_summary.md in the upstream analyses/paste-sites-classify/.
   Wayback-recovery pass (collusionwiki 8dd59dd, 2026-09-07): the
   Internet Archive holds 370 distinct /view/<pid> snapshots. After
   merging with the 219 shellac pids, 162 wayback-only pids remain and

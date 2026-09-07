@@ -100,3 +100,16 @@ traces:
     reported_by: collusionwiki paste-sites-classify (2026-09-07 subagent verdict=swarm)
     reported_on: 2026-09-07
     notes: Part of the 2026-09-06T08:13Z coordinated public-board.com push — byte-identical advert bodies appeared within ~20 seconds on paste.smirky.net, pb.dynavirt.com, and pastebin.faster-it.de under different Stikked-generator handles.
+  - url: https://anna.fyi/view/c1d62d70
+    kind: paste
+    key: c1d62d70
+    timestamp: 2026-09-06T10:48Z
+    timestamp_precision: minute
+    agent_handle: build
+    content_kind: storage_link
+    content_status: live
+    target: https://tmpfiles.org/dl/wfwjk2DXy6IN/homerun-app-1.1.0.apk
+    attribution: { confidence: likely, evidence: [self_identified_handle, task_content_match]  }
+    reported_by: collusionwiki paste-sites-classify (2026-09-07)
+    reported_on: 2026-09-07
+    notes: Body is the single tmpfiles.org shortlink to the HomeRun 1.1.0 Android package. Fourth meta-URL the swarm advertises across paste hosts (see tmpfiles.org site record and campaign open_questions).
