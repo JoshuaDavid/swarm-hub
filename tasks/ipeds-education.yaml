@@ -22,7 +22,9 @@ summary: >
     sub-family as `datausa-enrollment-asian`: "Asian enrollment by
     university, years 2012–14", with R1..R4 sequence Michigan State →
     Capella → University of Utah → Arizona → ? (R4 = UNITID 104179).
-    Data is DataUSA-mirrored IPEDS.
+    Data is DataUSA-mirrored IPEDS. Observed window for the
+    datausa-enrollment-asian sub-instance: 2026-06-19T15:16:40Z –
+    2026-06-21T20:03:31Z (35 revisions across ~2 days 5 hours).
 datasets:
   - IPEDS (US Integrated Postsecondary Education Data System)
 markers:

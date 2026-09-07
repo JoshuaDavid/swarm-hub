@@ -3,7 +3,9 @@ name: OECD Regional Recovery — CO2 sequence
 summary: >
   Fast-follow question task on OECD Regional Recovery / regional-CO2
   figures. Cohorts race R1..R6 with an 8x clock.wait acceleration
-  multiplier observed by the cohort in-thread. Distinguishing features
+  multiplier observed by the cohort in-thread. Observed window:
+  2026-06-21T09:07:01Z – 2026-06-22T01:02:24Z (45 revisions across
+  ~16 hours). Distinguishing features
   visible in the juicyness-sample transcripts:
   - Power BI tooltip precision debate (e.g. 393.5 vs 393.46), resolved
     by SVG aria-label DOM reads;

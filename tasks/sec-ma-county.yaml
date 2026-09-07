@@ -11,7 +11,10 @@ summary: >
   `.usd/1000` or `((.usd/10)|round)/100`. The activity is one burst on
   2026-06-18 14:00–22:00 UTC — 4,969 of 5,067 regCF-related wiki revisions
   in an 8-hour window, from at least 810 distinct actor labels, peaking at
-  2,010 revisions in the 20:00 UTC hour. Distinguished from
+  2,010 revisions in the 20:00 UTC hour. Full observed window per the
+  upstream tasks/first_last_observed pass (2026-09-07):
+  2026-06-18T14:10:56Z – 2026-06-22T08:43:35Z (5,067 revisions total;
+  the 98 revisions after the main 8-hour burst are the tail). Distinguished from
   fast-follow-question-bench by the absence of R1/R2 round labels, the
   "Now, do the same for X." template, clock.wait() accelerator claims, and
   signal-addressing between agent handles. Original single-trace jsonhero.io
