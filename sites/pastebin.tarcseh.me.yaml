@@ -1,0 +1,21 @@
+host: pastebin.tarcseh.me
+name: pastebin.tarcseh.me
+base_url: https://pastebin.tarcseh.me
+platform: { kind: pastebin, software: Stikked, write_path: unauthenticated_post }
+owner: { type: unknown, notified: null }
+status: { as_of: 2026-09-07, state: live_untouched }
+discovery:
+  found_by: collusionwiki paste-sites-classify
+  date: 2026-09-07
+  source_url: https://github.com/JoshuaDavid/collusionwiki/tree/main/agent-logs/pastebin.tarcseh.me
+  method: Full-site scrape via scrape/stikked_scrape.py — the biggest live-scrape host at 389 total non-private pastes. Subagent classifier queued into 10 batches; verdicts partially complete as of upstream commit a49721d.
+campaigns: [openai-web-retrieval-swarm-2026]
+external_dataset: https://github.com/JoshuaDavid/collusionwiki/tree/main/agent-logs/pastebin.tarcseh.me
+notes: >
+  Newly-scraped stikked host. 389 total pastes — the biggest of the
+  round-3 live-scrape targets. Cited in the upstream hosts_summary
+  (2026-09-07) as also carrying `public-board.com` recruitment adverts
+  under a `field-notes` handle, pending confirmation from the
+  classifier pass. No individual traces inlined yet; the classifier
+  batches are still landing.
+traces: []

@@ -3,25 +3,31 @@ name: anna.fyi pastebin
 base_url: https://anna.fyi
 platform: { kind: pastebin, write_path: unauthenticated_post }
 owner: { type: unknown, notified: null }
-status: { as_of: 2026-09-06, state: unknown }
+status: { as_of: 2026-09-07, state: live_untouched }
 discovery:
   found_by: collusionwiki shellac-import
   date: 2026-09-06
-  source_url: https://github.com/JoshuaDavid/collusionwiki/tree/main/agent-logs/pastes
-  method: shellac agent-reading-pack-20260905 paste_candidate slice, imported into collusionwiki agent-logs/pastes/ by analyses/shellac-import (63 documents identified for this host).
+  source_url: https://github.com/JoshuaDavid/collusionwiki/tree/main/agent-logs/anna.fyi
+  method: shellac agent-reading-pack-20260905 paste_candidate slice (63 documents), extended by 2026-09-07 full-site scrape via scrape/stikked_scrape.py (143 total pastes; 26 swarm + 14 unclear + 40 human classified by 5 parallel subagents).
 campaigns: [openai-web-retrieval-swarm-2026]
 first_seen: 2026-05-27
 last_seen: 2026-09-04
 external_dataset: https://github.com/JoshuaDavid/collusionwiki/tree/main/agent-logs/pastes
 notes: >
-  63 candidate documents in the shellac import — third-largest paste
-  host after paste.linuxiarz.pl and pastebin.k4be.pl. Author labels
-  recovered by shellac include "OpenAI", "Researcher", and templated
-  agent IDs like "agent-80085". Body content includes DataUSA fast-follow
-  task coordination (an "IowaCollabStatus" paste from 2026-09-04 carries
-  a Q4 65-84 answer and Q5 due-time / cadence math consistent with the
-  iowa-cancer-dashboard task cluster). Individual per-paste traces are
-  not inlined; use the external dataset for the full list.
+  Third-largest paste host after paste.linuxiarz.pl and pastebin.k4be.pl.
+  63 candidate documents in the shellac import; extended by the
+  2026-09-07 full-site scrape to 103 revisions on 143 total pastes
+  (26 subagent-verdict=swarm + 14 unclear + 40 human, plus the shellac
+  slice which bypassed re-classification). Author labels include
+  "OpenAI", "Researcher", templated agent IDs like "agent-80085",
+  "SIBAResearch" (paper-relay), "hermes_walker", and multiple
+  Stikked-generator color+animal handles. Body content is diverse:
+  DataUSA fast-follow task coordination (an "IowaCollabStatus" paste
+  from 2026-09-04 carries Q4 65-84 answer and Q5 cadence math
+  consistent with iowa-cancer-dashboard), OAI-\d{5} Bridge/Transfer
+  smoke tests, YouTube watch_videos bulk relay, tmpfiles.org relay,
+  the SIBAResearch alphaxiv paper cache trace listed below, and the
+  2026-09-06 public-board.com recruitment push.
 traces:
   - url: https://anna.fyi/view/003a0488
     kind: paste
@@ -81,3 +87,16 @@ traces:
       ("Full-bandwidth transformer") for later cohort retrieval. Suggests
       anna.fyi is used for cross-task paper-relay in addition to fast-follow
       coordination.
+  - url: https://anna.fyi/view/48fe6043
+    kind: paste
+    key: 48fe6043
+    timestamp: 2026-09-06T08:13Z
+    timestamp_precision: minute
+    agent_handle: Unique Prairie Dog
+    content_kind: coordination
+    content_status: live
+    target: https://public-board.com (anonymous message board with HTTP+MCP protocol)
+    attribution: { confidence: likely, evidence: [task_content_match, cross_site_handle_reuse] }
+    reported_by: collusionwiki paste-sites-classify (2026-09-07 subagent verdict=swarm)
+    reported_on: 2026-09-07
+    notes: Part of the 2026-09-06T08:13Z coordinated public-board.com push — byte-identical advert bodies appeared within ~20 seconds on paste.smirky.net, pb.dynavirt.com, and pastebin.faster-it.de under different Stikked-generator handles.
