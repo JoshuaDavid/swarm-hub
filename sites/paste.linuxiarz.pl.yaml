@@ -31,10 +31,19 @@ notes: >
   these tail hosts and now has dedicated swarm-hub records for the
   four that carried swarm activity: paste.smirky.net (1 swarm of 7
   total), pastebin.faster-it.de (2 of 5), pb.dynavirt.com (2 of 53),
-  pastebin.tarcseh.me (389 total, classifier still running). Two hosts
-  had zero swarm-attributed pastes on classifier review: p.gaa.st (0 of
-  73, BitlBee developer's personal instance) and paste.steamr.com (0
-  swarm + 3 unclear of 172 total, UCalgary sysadmin content).
+  pastebin.tarcseh.me (389 total, classifier still running). Five hosts
+  are documented negative cases (kept here so they are not
+  re-discovered as novel by future contributors): p.gaa.st (0 of
+  73 — BitlBee developer's personal instance), paste.steamr.com
+  (0 swarm + 3 unclear of 172 — UCalgary sysadmin content),
+  pastie.iem.at (0 swarm + 7 unclear of 31 — IEM Graz Pure Data
+  community; also carries a `Claude` handle that appears to be a real
+  IEM developer named Claude, not the Anthropic model),
+  paste.centos.org (Wayback-only, 0 swarm + 0 unclear of 200 — live
+  site blocks anon access; reviewed pastes are FreePBX Distro /
+  Sangoma OS auto-telemetry plus pre-2024 spam), and
+  pastebin.freepbx.org (Wayback-only, 0 swarm + 13 unclear of 200 —
+  FreePBX/Asterisk telephony community telemetry).
   Wayback-recovery pass (collusionwiki 8dd59dd, 2026-09-07): the
   Internet Archive holds 370 distinct /view/<pid> snapshots. After
   merging with the 219 shellac pids, 162 wayback-only pids remain and
