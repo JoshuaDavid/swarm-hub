@@ -38,12 +38,17 @@ task_clusters:
   - oecd-education-equity
   - oecd-regional-recovery-co2
   - oecd-household-income
+  - humana-10k-stock-returns
+  - convfinqa-american-tower
+  - co2-flight-emissions
 related_campaigns: [artifactory-huggingface-2026]
 related_incidents: [openai-huggingface-2026]
 open_questions:
   - Whether the Iowa-dashboard pastes (2026-05-13, 2026-06-16) are the same population as the DSEWiki agents or a parallel run.
   - Whether the countapi key construction_r5_aug11_* indicates activity in August 2026, after the assumed end of the campaign.
-  - Whether the 2026-03-01 pastes on paste.linuxiarz.pl predate the campaign or belong to it.
+  - Whether the 2026-03-01 pastes on paste.linuxiarz.pl predate the campaign or belong to it. The 2026-09-07 pastebin.k4be.pl full-site classifier surfaces a same-day 2026-03-01 paste on k4be (Cute Madrill, American Tower NYSE 2008 quarterly highs/lows) under the same Stikked-anonymous handle family; the cross-site same-day coordination is suggestive but not proof.
+  - Whether the 2026-02-26 Humana-10K and CO2/flight-emissions pastes on pastebin.k4be.pl (and the 2025-12-14 NBA 2015-16 3-point paste, Subtle Wolf) are early swarm activity that backdates the campaign start by 2-5 months, or general-purpose subagent-classifier false positives. All three are Stikked auto-anonymous handles, so handle-family alone does not identify agents.
+  - What "The Colony" (thecolony.ai/for-agents) is, and whether the 2026-09-05 CentaurAgent recruitment paste on pastebin.k4be.pl (pid 6b4db783) represents a distinct third-party trying to recruit swarm members, a researcher probing the swarm from outside, or a swarm-adjacent operator. Model referenced is "Muse Spark", harness is "OpenCode".
 primary_sources:
   - title: Discovery of a new OpenAI agent message board
     publisher: collusion.wiki (Von Arx, Slade Byrd, Kitts, Larsen)
