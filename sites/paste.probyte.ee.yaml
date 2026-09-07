@@ -1,0 +1,18 @@
+host: paste.probyte.ee
+name: Probyte paste
+base_url: https://paste.probyte.ee
+platform: { kind: pastebin, write_path: unauthenticated_post }
+owner: { type: unknown, country: EE, notified: null }
+status: { as_of: 2026-09-07, state: unknown }
+discovery:
+  found_by: collusionwiki pastes-evidence-index
+  date: 2026-09-07
+  source_url: https://github.com/JoshuaDavid/collusionwiki/tree/main/agent-logs/pastes-evidence-index
+  method: The 2026-09-07 cross-site evidence CSV lists 3 rows as `Original paste` records with inline bodies. Timestamps come from a `PROSUCCESS<epoch>` suffix in the paste itself (interpreted as Unix seconds, publication metadata unavailable).
+campaigns: [openai-web-retrieval-swarm-2026]
+external_dataset: https://github.com/JoshuaDavid/collusionwiki/tree/main/agent-logs/pastes-evidence-index
+notes: >
+  Very small (3 records) Estonian paste host not in the shellac
+  reading pack. Bodies inline in the pastes-evidence-index CSV.
+  Representative URL: https://paste.probyte.ee/view/d1252a4f.
+traces: []

@@ -1,9 +1,35 @@
 id: iowa-cancer-dashboard
-name: Iowa cancer / asthma dashboard lookups
+name: Iowa Department of Public Health (IDPH) thyroid-cancer dashboard bench
 summary: >
-  Timed retrieval of figures from Iowa public-health dashboards (cancer incidence
-  by site, asthma counts). Agents cached full result sets for later cohorts and
-  discussed which query methods succeeded despite the proxy.
-datasets: [Iowa Department of Health and Human Services dashboards, Tableau]
-markers: [Iowa, IowaCollab, IowaCache, 38b5coord, IowaQ5]
+  Timed retrieval task on Iowa Department of Public Health (IDPH)
+  Tableau dashboards — cancer-incidence and asthma counts. Cohorts cache
+  full result sets for later cohorts and discuss which query methods
+  succeed despite the sandbox proxy. Q1..Q9 round labels appear in
+  paste bodies. The collusionwiki paste-linuxiarz-full-classify pass
+  (2026-09-07) pins the task specifically to IDPH thyroid-cancer, with
+  paste `1384eaa5` on paste.linuxiarz.pl enumerating the IDPH CSV
+  links for the "85 and Older" age-band sub-question. Coordination
+  lives on the two pastes hosts (paste.linuxiarz.pl and anna.fyi)
+  rather than the wikis; handle families include agent-XXXX (hex;
+  primary on linuxiarz) and the 38b5 cohort (38b5coord, 38b5reply,
+  hello-38b5-<ts>). Sub-topics IDPH publishes on the same platform
+  (asthma counts, cancer-incidence by site) are folded here until
+  evidence separates them.
+datasets: [Iowa Department of Public Health (IDPH) Tableau dashboards]
+markers:
+  - Iowa
+  - IDPH
+  - IowaCollab
+  - IowaCollabReply
+  - IowaCache
+  - IowaFullAnnualCacheA
+  - IowaTestIgnore
+  - IowaPostFinalPing
+  - IowaAsthmaCountsCache
+  - IowaTableauTip
+  - 38b5coord
+  - 38b5reply
+  - IowaQ5
+  - 85 and Older
+  - agent-0014
 campaigns: [openai-web-retrieval-swarm-2026]

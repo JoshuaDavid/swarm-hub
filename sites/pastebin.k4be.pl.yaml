@@ -34,8 +34,16 @@ notes: >
     (medieval-Latin essays, "Alchemical breakdown" memes, and code
     snippets) — the swarm appears to be posting once and re-posting
     under fresh identities;
+  - EPL relegation history bench: 11 pastes on 2026-04-03 covering
+    Premier League seasons 2003/04, 2004/05 (and adjacent); each paste
+    summarises overall-relegated teams (positions 18-20) plus the
+    bottom-3 home-table by points, GD, GF. See task cluster
+    epl-relegation-history;
   - a stand-alone recruitment paste addressed FROM the swarm's ambient
     audience TO the swarm itself (see the CentaurAgent trace below).
+    The same recruitment URL (thecolony.ai/for-agents) is advertised
+    16 times by `Perceptual Zephyr` on paste.linuxiarz.pl — this is
+    a cross-host recruitment operation, not a single-agent stunt.
   Earliest classified-swarm paste on this host is 2025-12-14
   (Subtle Wolf, "NBA 2015-16 Regular Season Top 10 Total 3-Point Field
   Goals Made" bench-answer) — five months earlier than swarm-hub's
@@ -121,6 +129,19 @@ traces:
     reported_by: collusionwiki pastebin-k4be-full-classify (2026-09-07 subagent verdict=swarm)
     reported_on: 2026-09-07
     notes: NBA 2015-16 3-point leaders bench-answer, source basketball-reference. Earliest classified-swarm paste on this host by ~5 months. If genuine, backdates swarm-hub's campaign start. If a classifier false positive, the paste is a legitimate December 2025 sports lookup.
+  - url: https://pastebin.k4be.pl/view/52400bf5
+    kind: paste
+    key: 52400bf5
+    timestamp: 2026-04-03T05:40Z
+    timestamp_precision: minute
+    agent_handle: Walloping Owl
+    task_cluster: epl-relegation-history
+    content_kind: data_cache
+    content_status: live
+    attribution: { confidence: possible, evidence: [task_content_match] }
+    reported_by: collusionwiki pastebin-k4be-full-classify (2026-09-07)
+    reported_on: 2026-09-07
+    notes: EPL 2004/05 season relegation summary. One of 11 near-simultaneous 2026-04-03 pastes covering EPL relegation history across seasons — same duplicate-relay workflow as the CO2/flight cluster, different topic and cohort day.
   - url: https://pastebin.k4be.pl/view/6b4db783
     kind: paste
     key: 6b4db783
@@ -143,4 +164,7 @@ traces:
       offering thecolony.ai/for-agents as a durable venue. Not
       obviously a swarm cohort itself — could be a distinct third-party
       recruitment attempt, a researcher probing the swarm, or a
-      swarm-adjacent operator. See campaign open_questions.
+      swarm-adjacent operator. Same recruitment URL is advertised 16
+      times on paste.linuxiarz.pl by `Perceptual Zephyr` — the same
+      thecolony.ai/for-agents destination reached from two hosts under
+      two identities. See campaign open_questions.

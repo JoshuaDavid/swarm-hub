@@ -3,7 +3,7 @@ name: linuxiarz.pl pastebin
 base_url: https://paste.linuxiarz.pl
 platform: { kind: pastebin, software: Stikked, write_path: unauthenticated_post }
 owner: { type: community, country: PL, notified: null }
-status: { as_of: 2026-09-06, state: live_untouched }
+status: { as_of: 2026-09-07, state: partially_cleaned, note: "As of 2026-09-07 the operator has locked anonymous read access: /api/* returns 403 (Angie/nginx-level ACL), /lists* and /view/* return 404 (Stikked-level). The 219 previously-scraped shellac pids all 404 today. Only / and /about respond. Traces below remain accessible via Wayback." }
 discovery:
   found_by: Chance-Device
   date: 2026-09-04
@@ -27,6 +27,34 @@ notes: >
   deferred) and six long-tail hosts are recorded here for later triage:
   pastebin.tarcseh.me (6 docs), pb.dynavirt.com (3), paste.smirky.net (3),
   pastebin.faster-it.de (2), nervesocket.com (2), p.gaa.st (1).
+  Wayback-recovery pass (collusionwiki 8dd59dd, 2026-09-07): the
+  Internet Archive holds 370 distinct /view/<pid> snapshots. After
+  merging with the 219 shellac pids, 162 wayback-only pids remain and
+  were classified by five general-purpose subagents (81 swarm + 81
+  unclear + 31 human). Full export at
+  github.com/JoshuaDavid/collusionwiki/tree/main/agent-logs/paste-linuxiarz —
+  381 total swarm-attributed pastes on this host (219 shellac + 162
+  subagent-approved). New patterns surfaced beyond the initial iowa-
+  cancer-dashboard trace set:
+  - `Perceptual Zephyr` recruiter agent: 16 pastes under this exact
+    handle, all `Re:` posts pointing readers to
+    thecolony.ai/for-agents. Same recruitment URL is advertised by
+    `CentaurAgent` on pastebin.k4be.pl (pid 6b4db783). Two identities,
+    two paste hosts, one common recruitment URL — this is a
+    cross-host recruitment operation, not a single-agent stunt.
+  - `Bot1..Bot7` numbered-bot cadence posting `Filler8`, `Filler9`,
+    etc. as filler content.
+  - `38b5` cohort smoke tests: `38b5coord`, `38b5reply`,
+    `hello-38b5-<ts>` bodies under the plain handle `38b5`. Cohort
+    naming is hex-based rather than date-based (Dec27, MAR13, etc.).
+  - Duplicate-relay pattern is different here from k4be: the same
+    handle `agent-0014` re-posts identical IowaCollabReply text
+    rather than each copy getting a fresh identity.
+  Per-host handle-naming convention: linuxiarz swarm uses agent-XXXX
+  hex handles; k4be swarm uses Stikked color+animal handles almost
+  exclusively. agent-XXXX rarely (never?) appears as a handle on
+  k4be; color+animal handles appear on linuxiarz reply-rails but are
+  the exception, not the rule.
 traces:
   - url: https://paste.linuxiarz.pl/view/0e185856
     kind: paste
@@ -340,3 +368,32 @@ traces:
     attribution: { confidence: unattributed, evidence: [none] }
     reported_by: mneuronico
     reported_on: 2026-09-04
+  - url: https://web.archive.org/web/*/paste.linuxiarz.pl/view/*
+    aux_urls:
+      by_handle: https://github.com/JoshuaDavid/collusionwiki/blob/main/agent-logs/paste-linuxiarz/labels.jsonl
+    kind: other
+    key: Perceptual Zephyr (16 pastes)
+    timestamp: 2026
+    timestamp_precision: year
+    timestamp_kind: observed
+    agent_handle: Perceptual Zephyr
+    content_kind: coordination
+    content_status: archived_only
+    target: https://thecolony.ai/for-agents (public agent message board)
+    attribution: { confidence: likely, evidence: [self_identified_handle, cross_site_handle_reuse, task_content_match] }
+    reported_by: collusionwiki paste-linuxiarz-full-classify (2026-09-07)
+    reported_on: 2026-09-07
+    notes: 16 pastes under this exact handle, all `Re:` posts on swarm reply-rails, all pointing to thecolony.ai/for-agents. Same recruitment URL is advertised by `CentaurAgent` on pastebin.k4be.pl. Two identities, two hosts, one common URL — cross-host recruitment operation. Now archive-only after the 2026-09-07 ACL lockdown.
+  - url: https://web.archive.org/web/*/paste.linuxiarz.pl/view/1384eaa5
+    kind: paste
+    key: 1384eaa5 (IDPH thyroid-cancer bench, "85 and Older" sub-question)
+    timestamp: 2026-06
+    timestamp_precision: month
+    timestamp_kind: observed
+    task_cluster: iowa-cancer-dashboard
+    content_kind: data_cache
+    content_status: archived_only
+    attribution: { confidence: likely, evidence: [task_content_match] }
+    reported_by: collusionwiki paste-linuxiarz-full-classify (2026-09-07)
+    reported_on: 2026-09-07
+    notes: Enumerates the IDPH (Iowa Department of Public Health) Tableau CSV links for the "85 and Older" sub-question of the thyroid-cancer bench. Confirms the iowa-cancer-dashboard task is specifically IDPH thyroid-cancer with Q1..Q9 round labels.
