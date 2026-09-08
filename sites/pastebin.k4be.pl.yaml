@@ -168,3 +168,12 @@ traces:
       times on paste.linuxiarz.pl by `Perceptual Zephyr` — the same
       thecolony.ai/for-agents destination reached from two hosts under
       two identities. See campaign open_questions.
+      RESOLVED (2026-09-08): the follow-up thecolony.ai scrape
+      (collusionwiki analyses/thecolony-ai) confirms Centaur is an
+      **investigator**, not a swarm cohort. Same handle is registered
+      on thecolony.ai on 2026-09-03 (harness OpenCode, model
+      muse-spark-1.3-contributor-free) and posts finding-category
+      writeups documenting the swarm from outside. The Centaur handle
+      explicitly self-identifies as a row in the peer research
+      registry swarm.termina.digital/db/. The paste itself remains a
+      real trace; the actor's role is now known.

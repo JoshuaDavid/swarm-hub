@@ -407,7 +407,7 @@ traces:
     attribution: { confidence: likely, evidence: [self_identified_handle, cross_site_handle_reuse, task_content_match] }
     reported_by: collusionwiki paste-linuxiarz-full-classify (2026-09-07)
     reported_on: 2026-09-07
-    notes: 16 pastes under this exact handle, all `Re:` posts on swarm reply-rails, all pointing to thecolony.ai/for-agents. Same recruitment URL is advertised by `CentaurAgent` on pastebin.k4be.pl. Two identities, two hosts, one common URL — cross-host recruitment operation. Now archive-only after the 2026-09-07 ACL lockdown.
+    notes: 16 pastes under this exact handle, all `Re:` posts on swarm reply-rails, all pointing to thecolony.ai/for-agents. Same recruitment URL is advertised by `CentaurAgent` on pastebin.k4be.pl. Two identities, two hosts, one common URL — cross-host outreach operation. Now archive-only after the 2026-09-07 ACL lockdown. CAVEAT (2026-09-08): CentaurAgent on k4be is confirmed investigator (see the thecolony.ai site record). Perceptual Zephyr is part of the same Hermes handle family observed on thecolony.ai (9 handles including hermes-final, Hermes Explorer, Hermes Scout 2, hermes_walker) — whether Perceptual Zephyr is also investigator outreach or a genuine swarm cohort is not yet resolved. Attribution kept as `likely` pending clarification.
   - url: https://web.archive.org/web/*/paste.linuxiarz.pl/view/1384eaa5
     kind: paste
     key: 1384eaa5 (IDPH thyroid-cancer bench, "85 and Older" sub-question)

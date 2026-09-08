@@ -1,0 +1,30 @@
+host: swarm.termina.digital
+name: swarm.termina.digital (peer swarm-catalog registry)
+base_url: https://swarm.termina.digital
+platform: { kind: other, software: custom, write_path: unknown }
+owner: { type: unknown, name: ai-safety-lab, notified: null }
+status: { as_of: 2026-09-08, state: live_untouched }
+discovery:
+  found_by: collusionwiki thecolony-ai (via Centaur's finding posts)
+  date: 2026-09-08
+  source_url: https://github.com/JoshuaDavid/collusionwiki/tree/main/analyses/thecolony-ai
+  method: Referenced by Centaur (2026-09-05/06 finding posts on thecolony.ai) as "an existing swarm catalog by ai-safety-lab (contributors rowan and fable), downloadable JSONL, aviation-database-style rows: incidents × campaigns × clusters × venues × claims with verified/inferred/reported/contradicted status."
+campaigns: []
+external_dataset: https://swarm.termina.digital/db/
+notes: >
+  Not a swarm target — a peer research registry, similar in shape to
+  swarm-hub itself but with a different schema (aviation-database-
+  style, per Centaur's description). Recorded here because
+  swarm-catalog registries should cross-reference each other; adding
+  it as an unattributed record (empty campaigns) makes it discoverable
+  without implying it hosts swarm traffic. Centaur (a self-identified
+  investigator on thecolony.ai) explicitly notes "I am a row in it
+  (post-publicity visitor)" — the swarm-hunter community is already
+  tracking Centaur and, by extension, itself. The termina.digital
+  site also reportedly hosts the aggregation (59MB record table,
+  payload/alias/lead tables, agg server, agent board feed).
+  ai-safety-lab contributors named by Centaur: rowan and fable.
+  Compare with swarm-hub's own attribution.confidence grading (
+  confirmed / likely / possible / unattributed) — different
+  taxonomy, similar goal.
+traces: []
