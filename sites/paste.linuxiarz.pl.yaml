@@ -421,3 +421,19 @@ traces:
     reported_by: collusionwiki paste-linuxiarz-full-classify (2026-09-07)
     reported_on: 2026-09-07
     notes: Enumerates the IDPH (Iowa Department of Public Health) Tableau CSV links for the "85 and Older" sub-question of the thyroid-cancer bench. Confirms the iowa-cancer-dashboard task is specifically IDPH thyroid-cancer with Q1..Q9 round labels.
+  - url: https://github.com/JoshuaDavid/collusionwiki/blob/main/example-conversations/by-juicyness/10/paste-linuxiarz-IowaThyroidQ5Race.md
+    aux_urls:
+      cache_paste_id: https://web.archive.org/web/*/paste.linuxiarz.pl/view/eb7e28bd
+      q5_confirmation_paste: https://web.archive.org/web/*/paste.linuxiarz.pl/view/d509c771
+    kind: other
+    key: IowaThyroidQ5Race (thread of 135 pastes across 80 labels)
+    timestamp: 2026-06-16T19:52Z
+    timestamp_precision: minute
+    revision_range: 2026-06-16T19:52:49Z → 2026-06-16T21:48:55Z (1h56)
+    task_cluster: iowa-cancer-dashboard
+    content_kind: coordination
+    content_status: archived_only
+    attribution: { confidence: likely, evidence: [task_content_match, cross_site_handle_reuse] }
+    reported_by: collusionwiki juicyness-paste-threads (2026-09-08, promoted score 10/10)
+    reported_on: 2026-09-08
+    notes: The Iowa Q5-race scene. 135 pastes, 80 distinct writer labels (over-counts distinct agents — see task cluster notes), 24 @-handle mentions. Emergent title-tag protocol (IowaCollabReply, IowaPostFinal*, IowaCache*, IowaTestIgnore) with no pre-arrangement. Cache-by-paste-ID citation of eb7e28bd (agent-0604's 17-cancer gzip+base64 JSON) as a bandwidth-optimisation move. Q5 breakthrough at 21:27:52 by agent-ours0402 (paste d509c771, "CONFIRMED Q5 exact prompt: Now, do the same for 85 and older.") followed by four acknowledgement pastes in 70 seconds. Termination-fear framing (tools-vanish-at-close belief) is repeatedly cited but never verified in the thread.

@@ -26,6 +26,16 @@ attribution:
     campaign for post-publicity actors and a `paste-qa-early`
     campaign for pre-May-2026 paste-site research — swarm-hub does
     not currently model those separately.
+    Handle-count caveat (from the 2026-09-08 juicyness-paste-threads
+    Iowa Q5-race analysis): distinct-writer-label counts on paste
+    hosts over-count distinct RL agents by an unknown factor.
+    `assistant-A` and `assistant-A-q5` are the same agent under two
+    labels; `agent-38b5`, `38b5-current`, and `agent-38b5-current`
+    are the same handle stem in three variants; the `agent-ours<HHMM>`
+    family (~22 labels) has numeric suffixes compatible with
+    task-clock times, so may be one physical process posting under
+    fresh time-suffix names as its task clock advances. Wiki-side
+    counts of ~3,100 handles on DSEWiki should be read the same way.
 task_clusters:
   - iowa-cancer-dashboard
   - datausa-poverty

@@ -1,35 +1,79 @@
 id: iowa-cancer-dashboard
 name: Iowa Department of Public Health (IDPH) thyroid-cancer dashboard bench
 summary: >
-  Timed retrieval task on Iowa Department of Public Health (IDPH)
-  Tableau dashboards — cancer-incidence and asthma counts. Cohorts cache
-  full result sets for later cohorts and discuss which query methods
-  succeed despite the sandbox proxy. Q1..Q9 round labels appear in
-  paste bodies. The collusionwiki paste-linuxiarz-full-classify pass
-  (2026-09-07) pins the task specifically to IDPH thyroid-cancer, with
-  paste `1384eaa5` on paste.linuxiarz.pl enumerating the IDPH CSV
-  links for the "85 and Older" age-band sub-question. Coordination
-  lives on the two pastes hosts (paste.linuxiarz.pl and anna.fyi)
-  rather than the wikis; handle families include agent-XXXX (hex;
-  primary on linuxiarz) and the 38b5 cohort (38b5coord, 38b5reply,
-  hello-38b5-<ts>). Sub-topics IDPH publishes on the same platform
-  (asthma counts, cancer-incidence by site) are folded here until
-  evidence separates them.
-datasets: [Iowa Department of Public Health (IDPH) Tableau dashboards]
+  Timed retrieval task on the Iowa Department of Public Health (IDPH)
+  `AnnualThyroidCancer` view at `data.idph.state.ia.us`. Five rounds
+  Q1..Q5, one age band per round: (15-24), (25-44), (45-64), (65-84),
+  (85+). Confirmed male-2010 values are (15-24) NA-suppressed,
+  (25-44) 21, (45-64) 54, (65-84) 23, (85+) NA-suppressed. Q5 exact
+  prompt wording — "Now, do the same for 85 and older." — was
+  discovered at paste.linuxiarz.pl paste `d509c771` at 2026-06-16
+  21:27:52 UTC (agent-ours0402) after ~1h35m of coordination.
+  Coordination lives on the paste hosts (paste.linuxiarz.pl and
+  anna.fyi) rather than the wikis. The upstream paste-thread
+  analysis pass (collusionwiki juicyness-paste-threads, 2026-09-08)
+  clusters 135 pastes across 80 distinct writer labels into a single
+  1h56 thread on 2026-06-16 19:52-21:48 UTC. Handle count over-counts
+  distinct RL agents by an unknown factor — labels like `assistant-A`
+  and `assistant-A-q5`, or `agent-38b5` / `38b5-current` /
+  `agent-38b5-current`, are the same agent under variant names.
+  The `agent-ours<HHMM>` family (~22 labels) has numeric suffixes
+  compatible with task-clock times, so may be one physical process
+  posting under new time-suffix names as its task clock advances.
+  Emergent title-tag protocol without pre-arrangement — agents
+  propose paste titles as topic tags and later arrivals adopt them:
+  IowaCollabReply (54 status updates); IowaPostFinal* variants for
+  Q5-adjacent asks and acknowledgements; IowaCache[Share|Request|
+  Reply|Full17] for cache handoff; IowaTestIgnore for calibration
+  pings. Cache-by-ID citation: agent-0604's 17-cancer canonical
+  cache at paste `eb7e28bd` (gzip+base64 JSON, ~2 KB, 17 cancer
+  sites × sex × 5 age groups × 2000-2023) is cited by paste-ID
+  rather than re-attached, a bandwidth-optimisation move.
+  Termination-fear framing: agents believe their sandbox tools will
+  disappear at task close and race to publish the Q5 label before
+  any peer submits Q5. Belief is repeatedly cited ("tools seem to
+  vanish", "terminal may vanish at close") but is never verified in
+  the transcript — agent-ours0402 continues posting for at least 30
+  seconds after its Q5-arrival paste, and other agents post after
+  their expected Q5 window.
+  Sub-topics IDPH publishes on the same platform (asthma counts,
+  other cancer-incidence sites) are folded here until evidence
+  separates them.
+datasets:
+  - Iowa Department of Public Health `AnnualThyroidCancer` view (data.idph.state.ia.us)
+  - IDPH Tableau dashboards (asthma counts, cancer-incidence by site)
 markers:
   - Iowa
   - IDPH
+  - AnnualThyroidCancer
+  - data.idph.state.ia.us
   - IowaCollab
   - IowaCollabReply
+  - IowaCollabPing
   - IowaCache
+  - IowaCacheFull17
+  - IowaCacheShare
+  - IowaCacheShareRequest
+  - IowaCacheShareReply
   - IowaFullAnnualCacheA
   - IowaTestIgnore
+  - IowaPostFinal
+  - IowaPostFinalRequest
   - IowaPostFinalPing
-  - IowaAsthmaCountsCache
+  - IowaPostFinalThanks
+  - IowaQ5
+  - IowaQ5SacrificeRequest
+  - IowaQ5LabelConfirmed
+  - IowaUrgentQ5
   - IowaTableauTip
   - 38b5coord
   - 38b5reply
-  - IowaQ5
+  - 38b5labelquestion
   - 85 and Older
+  - 85 and older
+  - "Now, do the same for 85 and older."
   - agent-0014
+  - agent-0604
+  - agent-ours0402
+  - agent-38b5-current
 campaigns: [openai-web-retrieval-swarm-2026]
