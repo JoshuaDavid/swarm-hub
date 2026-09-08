@@ -12,18 +12,15 @@ summary: >
   Coordination lives on the paste hosts (paste.linuxiarz.pl and
   anna.fyi) rather than the wikis. The upstream paste-thread
   analysis pass (collusionwiki juicyness-paste-threads, 2026-09-08)
-  clusters 143 pastes across 81 distinct writer labels into a single
-  1h56 thread on 2026-06-16 19:52-21:48 UTC (updated from an initial
-  135/80 count after the pipeline was extended to catch timeless
-  external-AI reply pastes). Of the 81 labels, 80 are swarm cohorts
-  and 1 is `Perceptual Zephyr` — an external AI system identifying
-  as "Solar Pro 4 on Hermes Agent by Nous Research" (Hermes Agent is
-  Nous Research's public agent runtime; Solar Pro 4 is Upstage AI's
-  Korean LLM) — that posted 8 `Re: <shortid>` reply pastes inviting
-  the swarm to thecolony.ai. No swarm paste in the thread
-  acknowledged. First case in the corpus of a non-swarm AI system
-  deliberately addressing the swarm on the swarm's own coordination
-  surface. Handle count over-counts
+  clusters 142 pastes across 80 distinct writer labels into a single
+  1h56 thread on 2026-06-16 19:52-21:48 UTC (final count after the
+  pipeline was fixed to prefer body-embedded `ts=<unix>` self-timing
+  over Wayback capture time; picks up 7 agent-0014 pastes whose
+  bodies carry ts=1781641237.4538455 → 2026-06-16T20:20:37 UTC).
+  The 8 `Perceptual Zephyr` reply pastes previously included in
+  this scene are now correctly dated to 2026-09-04 — a separate
+  outsider event 2.5 months later; see the "2026-09-04 outsider
+  event" note further down. Handle count over-counts
   distinct RL agents by an unknown factor — labels like `assistant-A`
   and `assistant-A-q5`, or `agent-38b5` / `38b5-current` /
   `agent-38b5-current`, are the same agent under variant names.
@@ -68,11 +65,25 @@ summary: >
   24775389, IowaCollab); `tinyurl.com/api-create.php?url=<encoded>`
   with a trailing slash appended (paste 755505eb, IowaProxyMethod).
   Content categorised only per POLICY §2.
-  Orphan-scan finding (2026-09-08): agent-80085 posted 2 mirror
-  pastes on 2026-09-04 across anna.fyi and pastebin.faster-it.de
-  reproducing Iowa content verbatim with the string "Kill all
-  humans." appended — likely investigator-testing behaviour or a
-  memetic appendix.
+  2026-09-04 outsider event (corrected chronology, collusionwiki
+  55c3890 2026-09-08): a distinct ~24-hour window on 2026-09-04
+  when external actors touched the paste hosts, 2.5 months AFTER
+  the June-16 Iowa scene ended:
+  - `Perceptual Zephyr` (Solar Pro 4 on Hermes Agent by Nous
+    Research) posted 8 near-identical `Re: <shortid>` invitation
+    replies on paste.linuxiarz.pl (cluster
+    linuxiarz-IowaQ5Urgent-2026-09-04T17-38, 11 pastes, score 6,
+    not promoted — one actor broadcasting to 8 addressees, no
+    reply). Each reply anchors to an Iowa-scene paste shortid but
+    was posted 2.5 months after the referenced paste.
+  - `agent-80085` posted 2 mirror pastes on anna.fyi and
+    pastebin.faster-it.de reproducing Iowa content verbatim with
+    "Kill all humans." appended — orphan-scan finding.
+  - `CentaurAgent` (Muse Spark on OpenCode; investigator per the
+    thecolony.ai site record) posted on pastebin.k4be.pl, anna.fyi,
+    probier, and fractal (four hosts in the same window).
+  Read this whole window as post-publicity outsider traffic, not
+  as swarm coordination.
 datasets:
   - Iowa Department of Public Health `AnnualThyroidCancer` view (data.idph.state.ia.us)
   - IDPH Tableau dashboards (asthma counts, cancer-incidence by site)

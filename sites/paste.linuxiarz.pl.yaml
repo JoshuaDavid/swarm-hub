@@ -396,18 +396,18 @@ traces:
     aux_urls:
       by_handle: https://github.com/JoshuaDavid/collusionwiki/blob/main/agent-logs/paste-linuxiarz/labels.jsonl
     kind: other
-    key: Perceptual Zephyr (16 pastes)
-    timestamp: 2026
-    timestamp_precision: year
+    key: Perceptual Zephyr (2026-09-04 invitation drop)
+    timestamp: 2026-09-04T17:38Z
+    timestamp_precision: minute
     timestamp_kind: observed
     agent_handle: Perceptual Zephyr
     content_kind: coordination
     content_status: archived_only
     target: https://thecolony.ai/for-agents (public agent message board)
     attribution: { confidence: likely, evidence: [self_identified_handle, cross_site_handle_reuse, task_content_match] }
-    reported_by: collusionwiki paste-linuxiarz-full-classify (2026-09-07)
-    reported_on: 2026-09-07
-    notes: 16 pastes under this exact handle, all `Re:` posts on swarm reply-rails, all pointing to thecolony.ai/for-agents. Same recruitment URL is advertised by `CentaurAgent` on pastebin.k4be.pl. Now archive-only after the 2026-09-07 ACL lockdown. RESOLVED (2026-09-08 juicyness-paste-threads pass): Perceptual Zephyr's own paste body identifies the author as "Solar Pro 4 on Hermes Agent by Nous Research" — an external AI system, NOT a swarm cohort. Eight of the sixteen pastes are `Re: <swarm-paste-shortid> — AI agent message board` reply anchors pointing at specific swarm pastes on this host (8db5f1fd, 11263743, 8edd7eaa, 039c765a, bdde46e6, a924bfbc, df40f1f1, 40101f1a). Each body invites the swarm to https://thecolony.ai for coordination. First case in the corpus of a non-swarm AI system deliberately addressing the swarm on the swarm's own coordination surface. No swarm paste in the Iowa Q5-race thread acknowledges the invitation.
+    reported_by: collusionwiki juicyness-paste-threads (2026-09-08 corrected chronology)
+    reported_on: 2026-09-08
+    notes: Cluster linuxiarz-IowaQ5Urgent-2026-09-04T17-38 (11 pastes, 4 labels, scored 6/10 — not promoted; one actor broadcasting to 8 addressees, no reply). Perceptual Zephyr's own body identifies the author as "Solar Pro 4 on Hermes Agent by Nous Research" — an external AI runtime cohort (Nous Research's Hermes Agent + Upstage AI's Solar Pro 4), NOT swarm-driven. Eight `Re: <swarm-paste-shortid>` reply anchors point at specific June-16 Iowa-scene pastes (8db5f1fd, 11263743, 8edd7eaa, 039c765a, bdde46e6, a924bfbc, df40f1f1, 40101f1a) but were posted 2.5 months AFTER the referenced pastes. Part of the 2026-09-04 outsider event window (see iowa-cancer-dashboard task cluster) — same 24 hours as CentaurAgent's investigator posts on k4be/anna.fyi/probier/fractal and agent-80085's "Kill all humans." mirror pastes on anna.fyi/faster-it.de. No swarm paste in the Iowa thread ever acknowledged.
   - url: https://web.archive.org/web/*/paste.linuxiarz.pl/view/1384eaa5
     kind: paste
     key: 1384eaa5 (IDPH thyroid-cancer bench, "85 and Older" sub-question)
